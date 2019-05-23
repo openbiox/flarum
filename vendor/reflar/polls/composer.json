@@ -1,0 +1,46 @@
+{
+    "name": "reflar/polls",
+    "description": "A poll extension for your flarum Forum.",
+    "keywords": [
+        "extension",
+        "flarum",
+        "polls",
+        "poll",
+        "answer",
+        "reflar"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shahiem Seymor",
+            "email": "shahiem.seymor@reflar.email",
+            "homepage": "https://reflar.io"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ReFlar/polls/issues",
+        "source": "https://github.com/ReFlar/polls"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.8"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "ReFlar Polls",
+            "icon": {
+                "name": "fa fa-signal",
+                "backgroundColor": "#263238",
+                "color": "#ffffff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/9762-poll"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Reflar\\Polls\\": "src/"
+        }
+    }
+}

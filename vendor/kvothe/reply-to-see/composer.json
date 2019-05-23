@@ -1,0 +1,36 @@
+{
+  "name": "kvothe/reply-to-see",
+  "description": "Adds a reply to see BBCODE.",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.8"
+  },
+  "authors": [
+    {
+      "name": "Kvothe",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Kvothe\\ReplyToSee\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Reply 2 See",
+      "icon": {
+        "name": "2",
+        "backgroundColor": "#33ee33",
+        "color": "#ffffff"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

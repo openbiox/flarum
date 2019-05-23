@@ -1,0 +1,35 @@
+{
+  "name": "wiwatsrt/flarum-ext-best-answer",
+  "description": "Best Answer for Flarum.",
+  "type": "flarum-extension",
+  "keywords": ["flarum", "best-answer"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Wiwat Srisattha",
+      "email": "wiwat@srisattha.com"
+    }
+  ],
+  "require": {
+    "flarum/core": "^0.1.0-beta.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "WiwatSrt\\BestAnswer\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    },
+    "flarum-extension": {
+      "title": "Best Answer",
+      "icon": {
+        "name": "far fa-comment-dots",
+        "backgroundColor": "#EE8208",
+        "color": "#fff"
+      }
+    }
+  },
+  "minimum-stability": "dev"
+}

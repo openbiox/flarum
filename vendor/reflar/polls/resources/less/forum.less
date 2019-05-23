@@ -1,0 +1,259 @@
+.Form-group.Poll-group {
+  margin: 0;
+}
+
+.VotesModal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    color: @text-color;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+
+    &:hover .username {
+      text-decoration: underline;
+    }
+  }
+  .Avatar {
+    .Avatar--size(32px);
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+}
+
+/* PollOption */
+.PollOption {
+  margin-bottom: 15px;
+  width: 45%;
+  margin-right: 5px;
+  float: left;
+
+  &:nth-child(odd) {
+    float: right;
+  }
+}
+
+.PollOption-active {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: var(--width, 0);
+  background-color: @muted-color;
+
+  animation: slideIn 1s ease-in-out;
+}
+
+.PollOption-active .checkmark {
+  background-color: #fabc67;
+}
+
+/* Percent */
+.PollPercent {
+  float: right;
+  position: relative;
+  padding-right: 5px;
+}
+
+.PollLabel {
+  font-size: 85%;
+  font-weight: 600;
+  display: inline-block;
+  padding: .1em .5em;
+  border-radius: 4px;
+  background: #e8ecf3;
+  color: #667c99;
+  text-transform: none;
+}
+
+.PollModal-SubmitButton {
+  margin-top: 10px;
+}
+
+.PollModal-Button {
+  margin-bottom: 15px;
+}
+
+.DiscussionComposer-changePoll {
+  margin-right: 15px;
+  vertical-align: 2px;
+}
+
+.CommentPost--Reactions {
+  z-index: 3 !important;
+}
+
+.PublicPollButton {
+  margin: 10px 0px 15px 15px;
+}
+
+.PollInfoText {
+  margin-left: 15px;
+}
+
+/* PollBar */
+.PollBar {
+  background: transparent;
+  float: left;
+  width: 85%;
+  padding: 10px 10px 10px 0;
+  position: relative;
+  margin-left: 15px;
+  border-radius: 4px;
+  border: 2px solid @muted-color;
+  overflow: hidden;
+
+  &:hover {
+    background: #f3f3f39e;
+  }
+
+  label {
+    position: relative;
+    z-index: 2;
+
+    span {
+      padding-left: 15px;
+      font-size: 11px;
+      line-height: 19px;
+      font-weight: 600;
+    }
+  }
+
+  &[data-selected=true] {
+    border-color: @secondary-color;
+
+    .PollOption-active {
+      background-color: @secondary-color;
+    }
+
+    label .PollAnswer {
+      color: contrast(@secondary-color);
+    }
+  }
+}
+/* Checkbox */
+.PollBar label.checkbox {
+  margin-bottom: 0;
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    margin-left: 10px;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid;
+    border-radius: 4px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 6.75px;
+      top: 3px;
+      width: 5px;
+      height: 10px;
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.PollDiscussionModal .Form-group {
+  margin-top: 5px;
+
+  &.hide {
+    display: none;
+  }
+
+  fieldset {
+    float: left;
+    width: 90%;
+  }
+}
+
+/* Option remove */
+.Option-remove {
+  display: block;
+  text-decoration: none;
+  float: left;
+  margin: 5px;
+
+  &.disabled .TagLabel.untagged {
+    border-color: #aaa;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+}
+
+.Poll-answer-input {
+  max-width: 80%
+}
+
+.Poll-answer-button {
+  float: right;
+  border-width: 1px;
+  border-color: #000;
+  border-style: dotted;
+  padding-right: 7px;
+}
+
+.DiscussionComposer-poll {
+  margin-right: 15px;
+  vertical-align: 2px;
+
+  span {
+    background: transparent;
+    border: 1px dotted @muted-color;
+    color: @muted-color;
+  }
+}
+
+.Option-remove .TagLabel.untagged {
+  border-color: #e43232;
+  color: #e43232;
+}
+
+/* Mobile / Tablet */
+@media only screen and (max-width: 500px) {
+  .PollOption {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0
+  }
+  to {
+    width: var(--width);
+  }
+}
+
+.PollPercent--option {
+    color: #868686;
+}

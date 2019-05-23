@@ -1,0 +1,6 @@
+reflar-latex:
+  admin:
+    settings:
+      prevent_formatting_description: Some extensions such as Markdown may format your LaTeX expressions before they are visualized on the forum. By enabling this option, whenever you save a post, any LaTeX expression will be wrapped by code so the Markdown extension ignores it.
+      prevent_formatting_warning: This option modifies the content of posts before they are saved. When disabling or enabling, previous expressions will remain as-is until the respective post is edited.
+      prevent_formatting_label: Wrap LaTeX expressions with code

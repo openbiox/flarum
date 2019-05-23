@@ -1,0 +1,51 @@
+{
+    "name": "reflar/latex",
+    "description": "Renders LaTeX expressions.",
+    "keywords": ["latex", "flarum", "flagrow", "math", "expressions", "tex"],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matteo Pompili",
+            "email": "matpompili@gmail.com"
+        },
+        {
+            "name": "Daniël Klabbers",
+            "email": "daniel+flarum@klabbers.email",
+            "homepage": "http://hyn.io"
+        },
+        {
+            "name": "David Sevilla Martín",
+            "email": "david.s@redevs.org",
+            "homepage": "https://redevs.org"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/reflar/latex/issues",
+        "source": "https://github.com/reflar/latex"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.7"
+    },
+    "conflict": {
+      "flagrow/flarum-ext-latex": "*"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "ReFlar LaTeX",
+            "icon": {
+                "name": "superscript",
+                "backgroundColor": "#263238",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+          "discuss": "https://discuss.flarum.org/d/16176-latex-by-reflar"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Reflar\\Latex\\": "src/"
+        }
+    }
+}

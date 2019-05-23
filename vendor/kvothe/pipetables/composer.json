@@ -1,0 +1,36 @@
+{
+  "name": "kvothe/pipetables",
+  "description": "Active markdown tables.",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.8"
+  },
+  "authors": [
+    {
+      "name": "Kvothe",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Kvothe\\PipeTables\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Markdown Tables",
+      "icon": {
+        "name": "Tables",
+        "backgroundColor": "#000099",
+        "color": "#ffffff"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}
