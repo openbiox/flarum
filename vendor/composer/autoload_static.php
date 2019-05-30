@@ -122,6 +122,10 @@ class ComposerStaticInitdf869d71d67c023faec7ea16120802fa
             'Kvothe\\ReplyToSee\\' => 18,
             'Kvothe\\PipeTables\\' => 18,
         ),
+        'J' => 
+        array (
+            'JordanJay29\\Summaries\\' => 22,
+        ),
         'I' => 
         array (
             'Intervention\\Image\\' => 19,
@@ -156,6 +160,7 @@ class ComposerStaticInitdf869d71d67c023faec7ea16120802fa
             'FoF\\SocialProfile\\' => 18,
             'FoF\\Pages\\' => 10,
             'FoF\\Links\\' => 10,
+            'FoF\\Formatting\\' => 15,
             'Flarum\\Tags\\' => 12,
             'Flarum\\Suspend\\' => 15,
             'Flarum\\Subscriptions\\' => 21,
@@ -392,6 +397,10 @@ class ComposerStaticInitdf869d71d67c023faec7ea16120802fa
         array (
             0 => __DIR__ . '/..' . '/kvothe/pipetables/src',
         ),
+        'JordanJay29\\Summaries\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jordanjay29/flarum-ext-summaries/src',
+        ),
         'Intervention\\Image\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
@@ -495,6 +504,10 @@ class ComposerStaticInitdf869d71d67c023faec7ea16120802fa
         'FoF\\Links\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/links/src',
+        ),
+        'FoF\\Formatting\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/formatting/src',
         ),
         'Flarum\\Tags\\' => 
         array (

@@ -1,0 +1,35 @@
+{
+  "name": "noriods/auto-more",
+  "description": "Automatically clicks the 'load more' button when it comes into view.",
+  "keywords": [
+    "flarum",
+    "automatic",
+    "load",
+    "more"
+  ],
+  "type": "flarum-extension",
+  "license": "GPL-2.0",
+  "require": {
+    "flarum/core": "^0.1.0-beta-8"
+  },
+  "authors": [
+    {
+      "name": "NorioDS",
+      "email": "flarum@guitartalk.co.za",
+      "role": "Developer"
+    }
+  ],
+  "extra": {
+    "flarum-extension": {
+      "title": "Auto More",
+      "icon": {
+        "name": "fas fa-angle-double-down",
+        "backgroundColor": "#94dcff",
+        "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": "https://discuss.flarum.org/d/11961-auto-more"
+    }
+  }
+}

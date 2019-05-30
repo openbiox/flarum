@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8096dcee5cbb19e444a1b30a0d7450f1",
+    "content-hash": "293369e50bc1826e81dd3d6eb9d543c6",
     "packages": [
         {
             "name": "amaurycarrade/flarum-ext-syndication",
@@ -2060,6 +2060,59 @@
             "time": "2018-12-05T23:34:15+00:00"
         },
         {
+            "name": "fof/formatting",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/formatting.git",
+                "reference": "a6108aebc499cd8a119fed5976cd3550f8f2aa25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/formatting/zipball/a6108aebc499cd8a119fed5976cd3550f8f2aa25",
+                "reference": "a6108aebc499cd8a119fed5976cd3550f8f2aa25",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.8"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Formatting",
+                    "icon": {
+                        "name": "fas fa-font",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/17770-friendsofflarum-formatting"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Formatting\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Customize TextFormatter with plugins through the admin interface",
+            "keywords": [
+                "flarum"
+            ],
+            "time": "2018-12-10T16:23:30+00:00"
+        },
+        {
             "name": "fof/links",
             "version": "0.2.0",
             "source": {
@@ -3402,6 +3455,66 @@
             "time": "2018-05-29T14:19:03+00:00"
         },
         {
+            "name": "jordanjay29/flarum-ext-summaries",
+            "version": "0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jordanjay29/flarum-ext-summaries.git",
+                "reference": "688de4c560a909aea6e5714dc29d89851f6fb620"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jordanjay29/flarum-ext-summaries/zipball/688de4c560a909aea6e5714dc29d89851f6fb620",
+                "reference": "688de4c560a909aea6e5714dc29d89851f6fb620",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.8"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/2151-summaries-showing-excerpts-on-discussions-page"
+                },
+                "flarum-extension": {
+                    "title": "Summaries",
+                    "icon": {
+                        "name": "fas fa-sticky-note",
+                        "backgroundColor": "#00bac9",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JordanJay29\\Summaries\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordan Schnaidt (jordanjay29)",
+                    "email": "jordanschnaidt@gmail.com"
+                }
+            ],
+            "description": "Show summaries on all discussions.",
+            "keywords": [
+                "discussion",
+                "excerpt",
+                "excerpts",
+                "flarum",
+                "summaries",
+                "summary"
+            ],
+            "time": "2019-01-30T07:14:10+00:00"
+        },
+        {
             "name": "kvothe/pipetables",
             "version": "1.0.9",
             "source": {
@@ -4366,6 +4479,57 @@
                 "routing"
             ],
             "time": "2015-06-18T19:15:47+00:00"
+        },
+        {
+            "name": "noriods/auto-more",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/noriods/automore.git",
+                "reference": "8b83ba57fe31190bca01e1f0c5acd794537622b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/noriods/automore/zipball/8b83ba57fe31190bca01e1f0c5acd794537622b8",
+                "reference": "8b83ba57fe31190bca01e1f0c5acd794537622b8",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta-8"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Auto More",
+                    "icon": {
+                        "name": "fas fa-angle-double-down",
+                        "backgroundColor": "#94dcff",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/11961-auto-more"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "NorioDS",
+                    "email": "flarum@guitartalk.co.za",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Automatically clicks the 'load more' button when it comes into view.",
+            "keywords": [
+                "automatic",
+                "flarum",
+                "load",
+                "more"
+            ],
+            "time": "2019-01-10T08:56:33+00:00"
         },
         {
             "name": "oyejorge/less.php",
