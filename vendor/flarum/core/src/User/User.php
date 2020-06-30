@@ -115,13 +115,13 @@ class User extends AbstractModel
         parent::boot();
 
         // Don't allow the root admin to be deleted.
-        static::deleting(function (User $user) {
+        static::deleting(function (self $user) {
             if ($user->id == 1) {
                 throw new DomainException('Cannot delete the root admin');
             }
         });
 
-        static::deleted(function (User $user) {
+        static::deleted(function (self $user) {
             $user->raise(new Deleted($user));
 
             Notification::whereSubject($user)->delete();
@@ -753,7 +753,7 @@ class User extends AbstractModel
      */
     public function refreshCommentCount()
     {
-        $this->comment_count = $this->posts()->count();
+        $this->comment_count = $this->posts()->where('type', 'comment')->count();
 
         return $this;
     }

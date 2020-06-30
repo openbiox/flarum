@@ -11,15 +11,9 @@
 
 namespace Flarum\Likes\Listener;
 
-use Flarum\Api\Serializer\PostSerializer;
-use Flarum\Event\ConfigureNotificationTypes;
 use Flarum\Likes\Event\PostWasLiked;
-use Flarum\Likes\Event\PostWasUnliked;
 use Flarum\Likes\Notification\PostLikedBlueprint;
 use Flarum\Notification\NotificationSyncer;
-use Flarum\Post\Post;
-use Flarum\User\User;
-use Illuminate\Contracts\Events\Dispatcher;
 
 class SendNotificationWhenPostIsLiked
 {
@@ -36,51 +30,12 @@ class SendNotificationWhenPostIsLiked
         $this->notifications = $notifications;
     }
 
-    /**
-     * @param Dispatcher $events
-     */
-    public function subscribe(Dispatcher $events)
+    public function handle(PostWasLiked $event)
     {
-        $events->listen(ConfigureNotificationTypes::class, [$this, 'registerNotificationType']);
-        $events->listen(PostWasLiked::class, [$this, 'whenPostWasLiked']);
-        $events->listen(PostWasUnliked::class, [$this, 'whenPostWasUnliked']);
-    }
-
-    /**
-     * @param ConfigureNotificationTypes $event
-     */
-    public function registerNotificationType(ConfigureNotificationTypes $event)
-    {
-        $event->add(PostLikedBlueprint::class, PostSerializer::class, ['alert']);
-    }
-
-    /**
-     * @param PostWasLiked $event
-     */
-    public function whenPostWasLiked(PostWasLiked $event)
-    {
-        $this->sync($event->post, $event->user, [$event->post->user]);
-    }
-
-    /**
-     * @param PostWasUnliked $event
-     */
-    public function whenPostWasUnliked(PostWasUnliked $event)
-    {
-        $this->sync($event->post, $event->user, []);
-    }
-
-    /**
-     * @param Post $post
-     * @param User $user
-     * @param array $recipients
-     */
-    public function sync(Post $post, User $user, array $recipients)
-    {
-        if ($post->user->id != $user->id) {
+        if ($event->post->user->id != $event->user->id) {
             $this->notifications->sync(
-                new PostLikedBlueprint($post, $user),
-                $recipients
+                new PostLikedBlueprint($event->post, $event->user),
+                [$event->post->user]
             );
         }
     }

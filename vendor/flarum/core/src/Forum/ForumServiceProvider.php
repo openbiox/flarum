@@ -13,9 +13,12 @@ namespace Flarum\Forum;
 
 use Flarum\Event\ConfigureForumRoutes;
 use Flarum\Event\ConfigureMiddleware;
+use Flarum\Extension\Event\Disabled;
+use Flarum\Extension\Event\Enabled;
 use Flarum\Formatter\Formatter;
 use Flarum\Foundation\AbstractServiceProvider;
 use Flarum\Foundation\Application;
+use Flarum\Foundation\Event\ClearingCache;
 use Flarum\Frontend\AddLocaleAssets;
 use Flarum\Frontend\AddTranslations;
 use Flarum\Frontend\Assets;
@@ -25,6 +28,9 @@ use Flarum\Http\Middleware as HttpMiddleware;
 use Flarum\Http\RouteCollection;
 use Flarum\Http\RouteHandlerFactory;
 use Flarum\Http\UrlGenerator;
+use Flarum\Locale\LocaleManager;
+use Flarum\Settings\Event\Saved;
+use Flarum\Settings\Event\Saving;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use Zend\Stratigility\MiddlewarePipe;
@@ -41,7 +47,10 @@ class ForumServiceProvider extends AbstractServiceProvider
         });
 
         $this->app->singleton('flarum.forum.routes', function () {
-            return new RouteCollection;
+            $routes = new RouteCollection;
+            $this->populateRoutes($routes);
+
+            return $routes;
         });
 
         $this->app->singleton('flarum.forum.middleware', function (Application $app) {
@@ -59,6 +68,7 @@ class ForumServiceProvider extends AbstractServiceProvider
             $pipe->pipe($app->make(HttpMiddleware\StartSession::class));
             $pipe->pipe($app->make(HttpMiddleware\RememberFromCookie::class));
             $pipe->pipe($app->make(HttpMiddleware\AuthenticateWithSession::class));
+            $pipe->pipe($app->make(HttpMiddleware\CheckCsrfToken::class));
             $pipe->pipe($app->make(HttpMiddleware\SetLocale::class));
             $pipe->pipe($app->make(HttpMiddleware\ShareErrorsFromSession::class));
 
@@ -85,7 +95,7 @@ class ForumServiceProvider extends AbstractServiceProvider
             $assets->css(function (SourceCollector $sources) {
                 $sources->addFile(__DIR__.'/../../less/forum.less');
                 $sources->addString(function () {
-                    return $this->app->make(SettingsRepositoryInterface::class)->get('custom_less');
+                    return $this->app->make(SettingsRepositoryInterface::class)->get('custom_less', '');
                 });
             });
 
@@ -105,8 +115,6 @@ class ForumServiceProvider extends AbstractServiceProvider
      */
     public function boot()
     {
-        $this->populateRoutes($this->app->make('flarum.forum.routes'));
-
         $this->loadViewsFrom(__DIR__.'/../../views', 'flarum.forum');
 
         $this->app->make('view')->share([
@@ -116,19 +124,45 @@ class ForumServiceProvider extends AbstractServiceProvider
 
         $events = $this->app->make('events');
 
-        $events->subscribe(
-            new RecompileFrontendAssets(
-                $this->app->make('flarum.assets.forum'),
-                $this->app->make('flarum.locales')
-            )
+        $events->listen(
+            [Enabled::class, Disabled::class, ClearingCache::class],
+            function () {
+                $recompile = new RecompileFrontendAssets(
+                    $this->app->make('flarum.assets.forum'),
+                    $this->app->make(LocaleManager::class)
+                );
+                $recompile->flush();
+            }
         );
 
-        $events->subscribe(
-            new ValidateCustomLess(
-                $this->app->make('flarum.assets.forum'),
-                $this->app->make('flarum.locales'),
-                $this->app
-            )
+        $events->listen(
+            Saved::class,
+            function (Saved $event) {
+                $recompile = new RecompileFrontendAssets(
+                    $this->app->make('flarum.assets.forum'),
+                    $this->app->make(LocaleManager::class)
+                );
+                $recompile->whenSettingsSaved($event);
+
+                $validator = new ValidateCustomLess(
+                    $this->app->make('flarum.assets.forum'),
+                    $this->app->make('flarum.locales'),
+                    $this->app
+                );
+                $validator->whenSettingsSaved($event);
+            }
+        );
+
+        $events->listen(
+            Saving::class,
+            function (Saving $event) {
+                $validator = new ValidateCustomLess(
+                    $this->app->make('flarum.assets.forum'),
+                    $this->app->make('flarum.locales'),
+                    $this->app
+                );
+                $validator->whenSettingsSaving($event);
+            }
         );
     }
 

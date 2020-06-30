@@ -1,0 +1,502 @@
+[2019-09-02 01:15:11] production.ERROR: PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '83-1' for key 'posts_discussion_id_number_unique' in /var/www/flarum/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:117
+Stack trace:
+#0 /var/www/flarum/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php(117): PDOStatement->execute(NULL)
+#1 /var/www/flarum/vendor/illuminate/database/Connection.php(458): Doctrine\DBAL\Driver\PDOStatement->execute()
+#2 /var/www/flarum/vendor/illuminate/database/Connection.php(657): Illuminate\Database\Connection->Illuminate\Database\{closure}('insert into `po...', Array)
+#3 /var/www/flarum/vendor/illuminate/database/Connection.php(624): Illuminate\Database\Connection->runQueryCallback('insert into `po...', Array, Object(Closure))
+#4 /var/www/flarum/vendor/illuminate/database/Connection.php(459): Illuminate\Database\Connection->run('insert into `po...', Array, Object(Closure))
+#5 /var/www/flarum/vendor/illuminate/database/Connection.php(411): Illuminate\Database\Connection->statement('insert into `po...', Array)
+#6 /var/www/flarum/vendor/illuminate/database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `po...', Array)
+#7 /var/www/flarum/vendor/illuminate/database/Query/Builder.php(2628): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `po...', Array, 'id')
+#8 /var/www/flarum/vendor/illuminate/database/Eloquent/Builder.php(1338): Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#9 /var/www/flarum/vendor/illuminate/database/Eloquent/Model.php(823): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#10 /var/www/flarum/vendor/illuminate/database/Eloquent/Model.php(788): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 /var/www/flarum/vendor/illuminate/database/Eloquent/Model.php(651): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 /var/www/flarum/vendor/flarum/core/src/Post/Command/PostReplyHandler.php(104): Illuminate\Database\Eloquent\Model->save()
+#13 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(90): Flarum\Post\Command\PostReplyHandler->handle(Object(Flarum\Post\Command\PostReply))
+#14 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(128): Illuminate\Bus\Dispatcher->Illuminate\Bus\{closure}(Object(Flarum\Post\Command\PostReply))
+#15 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(104): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Flarum\Post\Command\PostReply))
+#16 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(98): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#17 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(76): Illuminate\Bus\Dispatcher->dispatchNow(Object(Flarum\Post\Command\PostReply))
+#18 /var/www/flarum/vendor/flarum/core/src/Discussion/Command/StartDiscussionHandler.php(85): Illuminate\Bus\Dispatcher->dispatch(Object(Flarum\Post\Command\PostReply))
+#19 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(90): Flarum\Discussion\Command\StartDiscussionHandler->handle(Object(Flarum\Discussion\Command\StartDiscussion))
+#20 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(128): Illuminate\Bus\Dispatcher->Illuminate\Bus\{closure}(Object(Flarum\Discussion\Command\StartDiscussion))
+#21 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(104): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Flarum\Discussion\Command\StartDiscussion))
+#22 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(98): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#23 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(76): Illuminate\Bus\Dispatcher->dispatchNow(Object(Flarum\Discussion\Command\StartDiscussion))
+#24 /var/www/flarum/vendor/flarum/core/src/Api/Controller/CreateDiscussionController.php(73): Illuminate\Bus\Dispatcher->dispatch(Object(Flarum\Discussion\Command\StartDiscussion))
+#25 /var/www/flarum/vendor/flarum/core/src/Api/Controller/AbstractSerializeController.php(98): Flarum\Api\Controller\CreateDiscussionController->data(Object(Zend\Diactoros\ServerRequest), Object(Tobscure\JsonApi\Document))
+#26 /var/www/flarum/vendor/flarum/core/src/Api/Controller/AbstractCreateController.php(24): Flarum\Api\Controller\AbstractSerializeController->handle(Object(Zend\Diactoros\ServerRequest))
+#27 /var/www/flarum/vendor/flarum/core/src/Http/RouteHandlerFactory.php(40): Flarum\Api\Controller\AbstractCreateController->handle(Object(Zend\Diactoros\ServerRequest))
+#28 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/DispatchRoute.php(67): Flarum\Http\RouteHandlerFactory->Flarum\Http\{closure}(Object(Zend\Diactoros\ServerRequest), Array)
+#29 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\DispatchRoute->process(Object(Zend\Diactoros\ServerRequest), Object(Closure))
+#30 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/SetLocale.php(51): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#31 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\SetLocale->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#32 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/CheckCsrfToken.php(33): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#33 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\CheckCsrfToken->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#34 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/AuthenticateWithHeader.php(56): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#35 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\AuthenticateWithHeader->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#36 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/AuthenticateWithSession.php(34): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#37 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\AuthenticateWithSession->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#38 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/RememberFromCookie.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#39 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\RememberFromCookie->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#40 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/StartSession.php(62): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#41 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\StartSession->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#42 /var/www/flarum/vendor/flarum/core/src/Api/Middleware/FakeHttpMethods.php(31): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#43 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Api\Middleware\FakeHttpMethods->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#44 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/ParseJsonBody.php(29): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#45 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\ParseJsonBody->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#46 /var/www/flarum/vendor/flarum/core/src/Api/Middleware/HandleErrors.php(42): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#47 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Api\Middleware\HandleErrors->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#48 /var/www/flarum/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#49 /var/www/flarum/vendor/middlewares/request-handler/src/RequestHandler.php(84): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#50 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Middlewares\RequestHandler->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#51 /var/www/flarum/vendor/middlewares/base-path-router/src/BasePathRouter.php(97): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#52 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Middlewares\BasePathRouter->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#53 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Middleware/OriginalMessages.php(41): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#54 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Zend\Stratigility\Middleware\OriginalMessages->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#55 /var/www/flarum/vendor/middlewares/base-path/src/BasePath.php(53): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#56 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Middlewares\BasePath->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#57 /var/www/flarum/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#58 /var/www/flarum/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#59 /var/www/flarum/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#60 /var/www/flarum/vendor/flarum/core/src/Http/Server.php(46): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#61 /var/www/flarum/public/index.php(23): Flarum\Http\Server->listen()
+#62 {main}
+
+Next Doctrine\DBAL\Driver\PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '83-1' for key 'posts_discussion_id_number_unique' in /var/www/flarum/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:119
+Stack trace:
+#0 /var/www/flarum/vendor/illuminate/database/Connection.php(458): Doctrine\DBAL\Driver\PDOStatement->execute()
+#1 /var/www/flarum/vendor/illuminate/database/Connection.php(657): Illuminate\Database\Connection->Illuminate\Database\{closure}('insert into `po...', Array)
+#2 /var/www/flarum/vendor/illuminate/database/Connection.php(624): Illuminate\Database\Connection->runQueryCallback('insert into `po...', Array, Object(Closure))
+#3 /var/www/flarum/vendor/illuminate/database/Connection.php(459): Illuminate\Database\Connection->run('insert into `po...', Array, Object(Closure))
+#4 /var/www/flarum/vendor/illuminate/database/Connection.php(411): Illuminate\Database\Connection->statement('insert into `po...', Array)
+#5 /var/www/flarum/vendor/illuminate/database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `po...', Array)
+#6 /var/www/flarum/vendor/illuminate/database/Query/Builder.php(2628): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `po...', Array, 'id')
+#7 /var/www/flarum/vendor/illuminate/database/Eloquent/Builder.php(1338): Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#8 /var/www/flarum/vendor/illuminate/database/Eloquent/Model.php(823): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 /var/www/flarum/vendor/illuminate/database/Eloquent/Model.php(788): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 /var/www/flarum/vendor/illuminate/database/Eloquent/Model.php(651): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 /var/www/flarum/vendor/flarum/core/src/Post/Command/PostReplyHandler.php(104): Illuminate\Database\Eloquent\Model->save()
+#12 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(90): Flarum\Post\Command\PostReplyHandler->handle(Object(Flarum\Post\Command\PostReply))
+#13 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(128): Illuminate\Bus\Dispatcher->Illuminate\Bus\{closure}(Object(Flarum\Post\Command\PostReply))
+#14 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(104): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Flarum\Post\Command\PostReply))
+#15 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(98): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#16 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(76): Illuminate\Bus\Dispatcher->dispatchNow(Object(Flarum\Post\Command\PostReply))
+#17 /var/www/flarum/vendor/flarum/core/src/Discussion/Command/StartDiscussionHandler.php(85): Illuminate\Bus\Dispatcher->dispatch(Object(Flarum\Post\Command\PostReply))
+#18 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(90): Flarum\Discussion\Command\StartDiscussionHandler->handle(Object(Flarum\Discussion\Command\StartDiscussion))
+#19 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(128): Illuminate\Bus\Dispatcher->Illuminate\Bus\{closure}(Object(Flarum\Discussion\Command\StartDiscussion))
+#20 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(104): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Flarum\Discussion\Command\StartDiscussion))
+#21 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(98): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#22 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(76): Illuminate\Bus\Dispatcher->dispatchNow(Object(Flarum\Discussion\Command\StartDiscussion))
+#23 /var/www/flarum/vendor/flarum/core/src/Api/Controller/CreateDiscussionController.php(73): Illuminate\Bus\Dispatcher->dispatch(Object(Flarum\Discussion\Command\StartDiscussion))
+#24 /var/www/flarum/vendor/flarum/core/src/Api/Controller/AbstractSerializeController.php(98): Flarum\Api\Controller\CreateDiscussionController->data(Object(Zend\Diactoros\ServerRequest), Object(Tobscure\JsonApi\Document))
+#25 /var/www/flarum/vendor/flarum/core/src/Api/Controller/AbstractCreateController.php(24): Flarum\Api\Controller\AbstractSerializeController->handle(Object(Zend\Diactoros\ServerRequest))
+#26 /var/www/flarum/vendor/flarum/core/src/Http/RouteHandlerFactory.php(40): Flarum\Api\Controller\AbstractCreateController->handle(Object(Zend\Diactoros\ServerRequest))
+#27 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/DispatchRoute.php(67): Flarum\Http\RouteHandlerFactory->Flarum\Http\{closure}(Object(Zend\Diactoros\ServerRequest), Array)
+#28 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\DispatchRoute->process(Object(Zend\Diactoros\ServerRequest), Object(Closure))
+#29 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/SetLocale.php(51): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#30 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\SetLocale->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#31 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/CheckCsrfToken.php(33): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#32 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\CheckCsrfToken->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#33 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/AuthenticateWithHeader.php(56): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#34 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\AuthenticateWithHeader->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#35 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/AuthenticateWithSession.php(34): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#36 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\AuthenticateWithSession->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#37 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/RememberFromCookie.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#38 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\RememberFromCookie->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#39 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/StartSession.php(62): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#40 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\StartSession->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#41 /var/www/flarum/vendor/flarum/core/src/Api/Middleware/FakeHttpMethods.php(31): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#42 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Api\Middleware\FakeHttpMethods->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#43 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/ParseJsonBody.php(29): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#44 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\ParseJsonBody->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#45 /var/www/flarum/vendor/flarum/core/src/Api/Middleware/HandleErrors.php(42): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#46 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Api\Middleware\HandleErrors->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#47 /var/www/flarum/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#48 /var/www/flarum/vendor/middlewares/request-handler/src/RequestHandler.php(84): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#49 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Middlewares\RequestHandler->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#50 /var/www/flarum/vendor/middlewares/base-path-router/src/BasePathRouter.php(97): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#51 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Middlewares\BasePathRouter->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#52 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Middleware/OriginalMessages.php(41): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#53 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Zend\Stratigility\Middleware\OriginalMessages->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#54 /var/www/flarum/vendor/middlewares/base-path/src/BasePath.php(53): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#55 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Middlewares\BasePath->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#56 /var/www/flarum/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#57 /var/www/flarum/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#58 /var/www/flarum/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#59 /var/www/flarum/vendor/flarum/core/src/Http/Server.php(46): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#60 /var/www/flarum/public/index.php(23): Flarum\Http\Server->listen()
+#61 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '83-1' for key 'posts_discussion_id_number_unique' (SQL: insert into `posts` (`is_approved`, `created_at`, `discussion_id`, `user_id`, `type`, `ip_address`, `content`, `is_private`, `number`) values (1, 2019-09-02 01:15:11, 83, 1, comment, 211.80.91.245, <r><p><IMG alt="" src="https://getstream-blog.imgix.net/blog/wp-content/uploads/2017/10/image2.png0w=870"><s>![</s><e>](https://getstream-blog.imgix.net/blog/wp-content/uploads/2017/10/image2.png1w=870)</e></IMG></p>
+
+<H1>Why we switched from Python to Go<e>
+=================================</e></H1>
+
+<p>Written by: <URL url="https://getstream.io/blog/author/thierry/"><s>[</s>Thierry Schellenbach<e>](https://getstream.io/blog/author/thierry/)</e></URL></p>
+
+<p>Published on: October 17, 2017 at 10:26 pm.</p>
+
+<p>Updated on: May 14, 2019 at 11:52 pm.</p>
+
+<p>Tags: <URL url="https://getstream.io/blog/tag/go/"><s>[</s>go<e>](https://getstream.io/blog/tag/go/)</e></URL>, <URL url="https://getstream.io/blog/tag/golang/"><s>[</s>golang<e>](https://getstream.io/blog/tag/golang/)</e></URL>, <URL url="https://getstream.io/blog/tag/grpc/"><s>[</s>grpc<e>](https://getstream.io/blog/tag/grpc/)</e></URL>, <URL url="https://getstream.io/blog/tag/micro-services/"><s>[</s>micro services<e>](https://getstream.io/blog/tag/micro-services/)</e></URL>, <URL url="https://getstream.io/blog/tag/performance/"><s>[</s>performance<e>](https://getstream.io/blog/tag/performance/)</e></URL>, <URL url="https://getstream.io/blog/tag/python/"><s>[</s>python<e>](https://getstream.io/blog/tag/python/)</e></URL>, <URL url="https://getstream.io/blog/tag/scalability/"><s>[</s>scalability<e>](https://getstream.io/blog/tag/scalability/)</e></URL></p>
+
+<p><EM><s>*</s>Updated May 14th 2019 to better reflect improvements to Go in the last 2 years (package management, better performance, faster compile times and a more mature ecosystem)<e>*</e></EM></p>
+
+<p>Switching to a new language is always a big step, especially when only one of your team members has prior experience with that language. Early this year, we switched <URL url="https://getstream.io/"><s>[</s>Stream<FP char="’">'</FP>s<e>](https://getstream.io/)</e></URL> primary programming language from Python to Go. This post will explain some of the reasons why we decided to leave Python behind and make the switch to Go.</p>
+
+<p>Thanks to <URL url="https://twitter.com/frascoapp"><s>[</s>Ren Sakamoto<e>](https://twitter.com/frascoapp)</e></URL> for translating <URL url="https://frasco.io/why-we-switched-from-python-to-go-19581e27de7c"><s>[</s>Why we switched from Python to Go into Japanese, なぜ私達は Python から Go に移行したのか<e>](https://frasco.io/why-we-switched-from-python-to-go-19581e27de7c)</e></URL>.</p>
+
+<H2>Reasons to Use Go<e>
+-----------------</e></H2>
+
+<H4><s>#### </s>Reason 1 - Performance</H4>
+
+<p><IMG alt="Go is fast!" src="https://getstream-blog.imgix.net/blog/wp-content/uploads/2017/10/image1.png"><s>![</s>Go is fast!<e>](https://getstream-blog.imgix.net/blog/wp-content/uploads/2017/10/image1.png)</e></IMG></p>
+
+<p>Go is fast!</p>
+
+<p>Go is extremely fast. The performance is similar to that of Java or C++. For our use case, Go is typically 40 times faster than Python. Here<FP char="’">'</FP>s a small benchmark game comparing <URL url="https://benchmarksgame-team.pages.debian.net/benchmarksgame/faster/go-python3.html"><s>[</s>Go vs Python<e>](https://benchmarksgame-team.pages.debian.net/benchmarksgame/faster/go-python3.html)</e></URL>.</p>
+
+<H4><s>#### </s>Reason 2 - Language Performance Matters</H4>
+
+<p>For many applications, the programming language is simply the glue between the app and the database. The performance of the language itself usually doesn<FP char="’">'</FP>t matter much.</p>
+
+<p>Stream, however, is an API provider powering <URL url="https://getstream.io/"><s>[</s>feeds<e>](https://getstream.io/)</e></URL> and <URL url="https://getstream.io/chat/"><s>[</s>chat<e>](https://getstream.io/chat/)</e></URL> infrastructure for 700 companies and more than 500 million end users. We<FP char="’">'</FP>ve been optimizing Cassandra, PostgreSQL, Redis, etc. for years, but eventually, you reach the limits of the language you<FP char="’">'</FP>re using.</p>
+
+<p>Python is a great language but its performance is pretty sluggish for use cases such as serialization/deserialization, ranking and aggregation. We frequently ran into performance issues where Cassandra would take 1ms to retrieve the data and Python would spend the next 10ms turning it into objects.</p>
+
+<H4><s>#### </s>Reason 3 - Developer Productivity &amp; Not Getting Too Creative</H4>
+
+<p>Have a look at this little snippet of Go code from the <URL url="http://howistart.org/posts/go/1/"><s>[</s>How I Start Go tutorial<e>](http://howistart.org/posts/go/1/)</e></URL>. (This is a great tutorial and a good starting point to pick up a bit of Go.)</p>
+
+<CODE><s>```</s><i>
+</i>package main
+
+type openWeatherMap struct{}
+
+func (w openWeatherMap) temperature(city string) (float64, error) {
+	resp, err := http.Get("http://api.openweathermap.org/data/2.5/weather?APPID=YOUR_API_KEY&amp;q=" + city)
+	if err != nil {
+		return 0, err
+	}
+
+	defer resp.Body.Close()
+
+	var d struct {
+		Main struct {
+			Kelvin float64 `json:"temp"`
+		} `json:"main"`
+	}
+
+	if err := json.NewDecoder(resp.Body).Decode(&amp;d); err != nil {
+		return 0, err
+	}
+
+	log.Printf("openWeatherMap: %s: %.2f", city, d.Main.Kelvin)
+	return d.Main.Kelvin, nil
+}<i>
+
+</i><e>```</e></CODE>
+
+<p>If you<FP char="’">'</FP>re new to Go, there<FP char="’">'</FP>s not much that will surprise you when reading that little code snippet. It showcases multiple assignments, data structures, pointers, formatting and a built-in HTTP library.</p>
+
+<p>When I first started programming I always loved using Python<FP char="’">'</FP>s more advanced features. Python allows you to get pretty creative with the code you<FP char="’">'</FP>re writing. For instance, you can:</p>
+
+<LIST><LI><s>-   </s>Use MetaClasses to self-register classes upon code initialization</LI>
+<LI><s>-   </s>Swap out True and False</LI>
+<LI><s>-   </s>Add functions to the list of built-in functions</LI>
+<LI><s>-   </s>Overload operators via magic methods</LI>
+<LI><s>-   </s>Use functions as properties via the @property decorator</LI></LIST>
+
+<p>These features are fun to play around with but, as most programmers will agree, they often make the code harder to understand when reading someone else<FP char="’">'</FP>s work.</p>
+
+<p>Go forces you to stick to the basics. This makes it very easy to read anyone<FP char="’">'</FP>s code and immediately understand what<FP char="’">'</FP>s going on.</p>
+
+<p><EM><s>*</s>Note: How <FP char="“">"</FP>easy<FP char="”">"</FP> it is really depends on your use case, of course. If you want to create a basic CRUD API I<FP char="’">'</FP>d still recommend Django + <e>*</e></EM><URL url="http://www.django-rest-framework.org/"><s>[</s><EM><s>*</s>DRF<e>*</e></EM><e>](http://www.django-rest-framework.org/)</e></URL><EM><s>*</s>, or Rails.<e>*</e></EM></p>
+
+<H4><s>#### </s>Reason 4 - Concurrency &amp; Channels</H4>
+
+<p>As a language, Go tries to keep things simple. It doesn<FP char="’">'</FP>t introduce many new concepts. The focus is on creating a simple language that is incredibly fast and easy to work with. The only area where it does get innovative is goroutines and channels. (To be 100% correct the concept of <URL url="https://en.wikipedia.org/wiki/Communicating_sequential_processes"><s>[</s>CSP<e>](https://en.wikipedia.org/wiki/Communicating_sequential_processes)</e></URL> started in 1977, so this innovation is more of a new approach to an old idea.) Goroutines are Go<FP char="’">'</FP>s lightweight approach to threading, and channels are the preferred way to communicate between goroutines.</p>
+
+<p>Goroutines are very cheap to create and only take a few KBs of additional memory. Because Goroutines are so light, it is possible to have hundreds or even thousands of them running at the same time.</p>
+
+<p>You can communicate between goroutines using channels. The Go runtime handles all the complexity. The goroutines and channel-based approach to concurrency makes it very easy to use all available CPU cores and handle concurrent IO - all without complicating development. Compared to Python/Java, running a function on a goroutine requires minimal boilerplate code. You simply prepend the function call with the keyword <FP char="“">"</FP>go<FP char="”">"</FP>:</p>
+
+<CODE><s>```</s><i>
+</i>package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func say(s string) {
+	for i := 0; i &lt; 5; i++ {
+		time.Sleep(100 * time.Millisecond)
+		fmt.Println(s)
+	}
+
+}
+
+func main() {
+	go say("world")
+	say("hello")
+}<i>
+
+</i><e>```</e></CODE>
+
+<p>&lt;<URL url="https://tour.golang.org/concurrency/1">https://tour.golang.org/concurrency/1</URL>&gt;</p>
+
+<p>Go<FP char="’">'</FP>s approach to concurrency is very easy to work with. It<FP char="’">'</FP>s an interesting approach compared to Node where the developer has to pay close attention to how asynchronous code is handled.</p>
+
+<p>Another great aspect of concurrency in Go is the <URL url="https://blog.golang.org/race-detector"><s>[</s>race detector<e>](https://blog.golang.org/race-detector)</e></URL>. This makes it easy to figure out if there are any race conditions within your asynchronous code.</p>
+
+<QUOTE><i>&gt; </i><p><URL url="https://twitter.com/iamdevloper"><s>[</s><IMG alt="" src="https://pbs.twimg.com/profile_images/1071055431215276033/U9-RIlDs_normal.jpg"><s>![</s><e>](https://pbs.twimg.com/profile_images/1071055431215276033/U9-RIlDs_normal.jpg)</e></IMG><e>](https://twitter.com/iamdevloper)</e></URL></p>
+<i>&gt;</i>
+<i>&gt; </i><p>[</p>
+<i>&gt;</i>
+<i>&gt; </i><p>I Am Devloper@iamdevloper</p>
+<i>&gt;</i>
+<i>&gt; </i><p>](<URL url="https://twitter.com/iamdevloper">https://twitter.com/iamdevloper</URL>)</p>
+<i>&gt;</i>
+<i>&gt; </i><p><URL url="https://twitter.com/iamdevloper/status/399991896862638081"><s>[</s><e>](https://twitter.com/iamdevloper/status/399991896862638081)</e></URL></p>
+<i>&gt;</i>
+<i>&gt; </i><p>Knock knock\<br/>
+<i>&gt; </i>Race condition\<br/>
+<i>&gt; </i>Who<FP char="’">'</FP>s there?</p>
+<i>&gt;</i>
+<i>&gt; </i><p><URL title="Like" url="https://twitter.com/intent/like?tweet_id=399991896862638081"><s>[</s>1,008<e>](https://twitter.com/intent/like?tweet_id=399991896862638081 "Like")</e></URL></p>
+<i>&gt;</i>
+<i>&gt; </i><p><URL url="https://twitter.com/iamdevloper/status/399991896862638081"><s>[</s>4:07 AM - Nov 12, 2013<e>](https://twitter.com/iamdevloper/status/399991896862638081)</e></URL></p>
+<i>&gt;</i>
+<i>&gt; </i><p><URL title="Twitter Ads info and privacy" url="https://support.twitter.com/articles/20175256"><s>[</s>Twitter Ads info and privacy<e>](https://support.twitter.com/articles/20175256 "Twitter Ads info and privacy")</e></URL></p></QUOTE>
+
+<p>[</p>
+
+<p>2,547 people are talking about this</p>
+
+<p>](<TWITTER id="399991896862638081"><URL url="https://twitter.com/iamdevloper/status/399991896862638081">https://twitter.com/iamdevloper/status/399991896862638081</URL></TWITTER> <FP char="“">"</FP>View the conversation on Twitter<FP char="”">"</FP>)</p>
+
+<p>Here are a few good resources to get started with Go and channels:</p>
+
+<LIST><LI><s>-   </s>&lt;<URL url="https://gobyexample.com/channels">https://gobyexample.com/channels</URL>&gt;</LI>
+<LI><s>-   </s>&lt;<URL url="https://tour.golang.org/concurrency/2">https://tour.golang.org/concurrency/2</URL>&gt;</LI>
+<LI><s>-   </s>&lt;<URL url="http://guzalexander.com/2013/12/06/golang-channels-tutorial.html">http://guzalexander.com/2013/12/06/golang-channels-tutorial.html</URL>&gt;</LI>
+<LI><s>-   </s>&lt;<URL url="https://www.golang-book.com/books/intro/10">https://www.golang-book.com/books/intro/10</URL>&gt;</LI>
+<LI><s>-   </s>&lt;<URL url="https://www.goinggo.net/2014/02/the-nature-of-channels-in-go.html">https://www.goinggo.net/2014/02/the-nature-of-channels-in-go.html</URL>&gt;</LI>
+<LI><s>-   </s><URL url="https://softwareengineering.stackexchange.com/questions/222642/are-go-langs-goroutine-pools-just-green-threads"><s>[</s>Goroutines vs Green threads<e>](https://softwareengineering.stackexchange.com/questions/222642/are-go-langs-goroutine-pools-just-green-threads)</e></URL></LI></LIST>
+
+<H4><s>#### </s>Reason 5 - Fast Compile Time</H4>
+
+<p>Our largest micro service written in Go currently takes 4 seconds to compile. Go<FP char="’">'</FP>s fast compile times are a major productivity win compared to languages like Java and C++ which are famous for sluggish compilation speed. I like sword fighting, but it<FP char="’">'</FP>s even nicer to get things done while I still remember what the code is supposed to do:</p>
+
+<p><URL url="https://xkcd.com/303/"><s>[</s><IMG alt="XKCD - Code compiling before Go" src="https://getstream-blog.imgix.net/blog/wp-content/uploads/2017/10/image3.png"><s>![</s>XKCD - Code compiling before Go<e>](https://getstream-blog.imgix.net/blog/wp-content/uploads/2017/10/image3.png)</e></IMG><e>](https://xkcd.com/303/)</e></URL></p>
+
+<p>XKCD - Code compiling before Go</p>
+
+<H4><s>#### </s>Reason 6 - The Ability to Build a Team</H4>
+
+<p>First of all, let<FP char="’">'</FP>s start with the obvious: there are not as many Go developers compared to older languages like C++ and Java. According to <URL url="https://insights.stackoverflow.com/survey/2017"><s>[</s>StackOverflow<e>](https://insights.stackoverflow.com/survey/2017)</e></URL>, 38% of developers know Java, 19.3% know C++ and only 4.6% know Go. <URL url="https://madnight.github.io/githut/"><s>[</s>GitHub data<e>](https://madnight.github.io/githut/)</e></URL>shows a <URL url="http://githut.info/"><s>[</s>similar trend<e>](http://githut.info/)</e></URL>: Go is more widely used than languages such as Erlang, Scala and Elixir, but less popular than Java and C++.</p>
+
+<p>Fortunately, Go is a very simple and easy to learn language. It provides the basic features you need and nothing else. The new concepts it introduces are the <FP char="“">"</FP><URL url="https://blog.golang.org/defer-panic-and-recover"><s>[</s>defer<e>](https://blog.golang.org/defer-panic-and-recover)</e></URL><FP char="”">"</FP> statement and built-in management of concurrency with <FP char="“">"</FP>go routines<FP char="”">"</FP> and channels. (For the purists: Go isn<FP char="’">'</FP>t the first language to implement these concepts, just the first to make them popular.) Any Python, Elixir, C++, Scala or Java dev that joins a team can be effective at Go within a month because of its simplicity.</p>
+
+<p>We<FP char="’">'</FP>ve found it easier to build a team of Go developers compared to many other languages. If you<FP char="’">'</FP>re hiring people in competitive ecosystems like <URL url="http://angel.co/stream/jobs"><s>[</s>Boulder and Amsterdam<e>](http://angel.co/stream/jobs)</e></URL> this is an important benefit.</p>
+
+<H4><s>#### </s>Reason 7 - Strong Ecosystem</H4>
+
+<p>For a team of our size (<SUB><s>~</s>20</SUB> people) the ecosystem matters. You simply can<FP char="’">'</FP>t create value for your customers if you have to reinvent every little piece of functionality. Go has great support for the tools we use. Solid libraries were already available for Redis, RabbitMQ, PostgreSQL, Template parsing, Task scheduling, Expression parsing and RocksDB.</p>
+
+<p>Go<FP char="’">'</FP>s ecosystem is a major win compared to other newer languages like Rust or Elixir. It<FP char="’">'</FP>s of course not as good as languages like Java, Python or Node, but it<FP char="’">'</FP>s solid and for many basic needs you<FP char="’">'</FP>ll find high-quality packages already available.</p>
+
+<H4><s>#### </s>Reason 8 - Gofmt, Enforced Code Formatting</H4>
+
+<p>Let<FP char="’">'</FP>s start with what is Gofmt? And no, it<FP char="’">'</FP>s not a swear word. Gofmt is an awesome command line utility, built into the Go compiler for formatting your code. In terms of functionality it<FP char="’">'</FP>s very similar to Python<FP char="’">'</FP>s autopep8. While the show Silicon Valley portrays otherwise, most of us don<FP char="’">'</FP>t really like to argue about tabs vs spaces. It<FP char="’">'</FP>s important that formatting is consistent, but the actual formatting standard doesn<FP char="’">'</FP>t really matter all that much. Gofmt avoids all of this discussion by having one official way to format your code.</p>
+
+<H4><s>#### </s>Reason 9 - gRPC and Protocol Buffers</H4>
+
+<p>Go has first-class support for protocol buffers and gRPC. These two tools work very well together for building microservices which need to communicate via RPC. You only need to write a manifest where you define the RPC calls that can be made and what arguments they take. Both server and client code are then automatically generated from this manifest. This resulting code is both fast, has a very small network footprint and is easy to use.</p>
+
+<p>From the same manifest, you can generate client code for many different languages even, such as C++, Java, Python and Ruby. So, no more ambiguous REST endpoints for internal traffic, that you have to write almost the same client and server code for every time. .</p>
+
+<H2>Disadvantages of Using Golang<e>
+-----------------------------</e></H2>
+
+<H4><s>#### </s>Disadvantage 1 - Lack of Frameworks</H4>
+
+<p>Go doesn<FP char="’">'</FP>t have a single dominant framework like Rails for Ruby, Django for Python or Laravel for PHP. This is a topic of heated debate within the Go community, as many people advocate that you shouldn<FP char="’">'</FP>t use a framework to begin with. I totally agree that this is true for some use cases. However, if someone wants to build a simple CRUD API they will have a much easier time with Django/DJRF, Rails Laravel or <URL url="http://phoenixframework.org/"><s>[</s>Phoenix<e>](http://phoenixframework.org/)</e></URL>.</p>
+
+<p><EM><s>*</s>Update:<e>*</e></EM> as the comments pointed out there are several projects that provide a framework for Go. <URL url="https://github.com/revel/revel"><s>[</s>Revel<e>](https://github.com/revel/revel)</e></URL>, <URL url="https://iris-go.com/"><s>[</s>Iris<e>](https://iris-go.com/)</e></URL>, <URL url="https://github.com/labstack/echo"><s>[</s>Echo<e>](https://github.com/labstack/echo)</e></URL>, <URL url="https://github.com/go-macaron/macaron"><s>[</s>Macaron<e>](https://github.com/go-macaron/macaron)</e></URL> and <URL url="https://github.com/gobuffalo/buffalo"><s>[</s>Buffalo<e>](https://github.com/gobuffalo/buffalo)</e></URL> seem to be the leading contenders. For Stream<FP char="’">'</FP>s use case we prefer to not use a framework. However for many new projects that are looking to provide a simple CRUD API the lack of a dominant framework will be a serious disadvantage.</p>
+
+<H4><s>#### </s>Disadvantage 2 - Error Handling</H4>
+
+<p>Go handles errors by simply returning an error from a function and expecting your calling code to handle the error (or to return it up the calling stack). While this approach works, it<FP char="’">'</FP>s easy to lose scope of what went wrong to ensure you can provide a meaningful error to your users. The <URL url="https://github.com/pkg/errors"><s>[</s>errors package<e>](https://github.com/pkg/errors)</e></URL> solves this problem by allowing you to add context and a stack trace to your errors.</p>
+
+<p>Another issue is that it<FP char="’">'</FP>s easy to forget to handle an error by accident. Static analysis tools like errcheck and megacheck are handy to avoid making these mistakes.</p>
+
+<p>While these workarounds work well it doesn<FP char="’">'</FP>t feel quite right. You<FP char="’">'</FP>d expect proper error handling to be supported by the language.</p>
+
+<H4><s>#### </s>Disadvantage 3 - Package Management</H4>
+
+<p><EM><s>*</s>Update: Go<FP char="’">'</FP>s package management has come a long way since this post was written. <URL url="https://blog.golang.org/using-go-modules"><s>[</s>Go modules<e>](https://blog.golang.org/using-go-modules)</e></URL> are an effective solution, the only issue I<FP char="’">'</FP>ve seen with them is that they break some static analysis tools like errcheck. Here<FP char="’">'</FP>s a tutorial for learning to use <URL url="https://getstream.io/blog/go-1-11-rocket-tutorial/"><s>[</s>Go using Go modules<e>](https://getstream.io/blog/go-1-11-rocket-tutorial/)</e></URL>.  <e>*</e></EM></p>
+
+<p>Go<FP char="’">'</FP>s package management is by no means perfect. By default, it doesn<FP char="’">'</FP>t have a way to specify a specific version of a dependency and there<FP char="’">'</FP>s no way to create reproducible builds. Python, Node and Ruby all have better systems for package management. However, with the right tools, Go<FP char="’">'</FP>s package management works quite well.</p>
+
+<p>You can use <URL url="https://github.com/golang/dep"><s>[</s>Dep<e>](https://github.com/golang/dep)</e></URL> to manage your dependencies to allow specifying and pinning versions. Apart from that, we<FP char="’">'</FP>ve contributed an open-source tool called <URL url="https://github.com/getstream/vg"><s>[</s>VirtualGo<e>](https://github.com/getstream/vg)</e></URL> which makes it easier to work on multiple projects written in Go.</p>
+
+<p><URL url="https://github.com/getstream/vg"><s>[</s><IMG alt="Virtual Go" src="https://getstream-blog.imgix.net/blog/wp-content/uploads/2017/10/image4.png?w=300&amp;h=300"><s>![</s>Virtual Go<e>](https://getstream-blog.imgix.net/blog/wp-content/uploads/2017/10/image4.png?w=300&amp;h=300)</e></IMG><e>](https://github.com/getstream/vg)</e></URL></p>
+
+<p>Virtual Go</p>
+
+<H2>Python vs Go<e>
+------------</e></H2>
+
+<p><EM><s>*</s>Update: The performance difference between Python and Go increased since this post was written. (Go became faster and Python didn<FP char="’">'</FP>t)<e>*</e></EM></p>
+
+<p>One interesting experiment we conducted was taking our <URL url="https://getstream.io/docs/#custom_ranking"><s>[</s>ranked feed<e>](https://getstream.io/docs/#custom_ranking)</e></URL> functionality in Python and rewriting it in Go. Have a look at this example of a ranking method:</p>
+
+<CODE><s>```</s><i>
+</i>
+{
+	"functions": {
+		"simple_gauss": {
+			"base": "decay_gauss",
+			"scale": "5d",
+			"offset": "1d",
+			"decay": "0.3"
+		},
+		"popularity_gauss": {
+			"base": "decay_gauss",
+			"scale": "100",
+			"offset": "5",
+			"decay": "0.5"
+		}
+	},
+	"defaults": {
+		"popularity": 1
+	},
+	"score": "simple_gauss(time)*popularity"
+}<i>
+
+</i><e>```</e></CODE>
+
+<p>Both the Python and Go code need to do the following to support this ranking method:</p>
+
+<LIST type="decimal"><LI><s>1.  </s>Parse the expression for the score. In this case, we want to turn this string <FP char="“">"</FP>simple_gauss(time)*popularity<FP char="”">"</FP> into a function that takes an activity as input and returns a score as output.</LI>
+<LI><s>2.  </s>Create partial functions based on the JSON config. For example, we want <FP char="“">"</FP>simple_gauss<FP char="”">"</FP> to call <FP char="“">"</FP>decay_gauss<FP char="”">"</FP> with a scale of 5 days, offset of 1 day and a decay factor of 0.3.</LI>
+<LI><s>3.  </s>Parse the <FP char="“">"</FP>defaults<FP char="”">"</FP> configuration so you have a fallback if a certain field is not defined on an activity.</LI>
+<LI><s>4.  </s>Use the function from step 1 to score all activities in the feed.</LI></LIST>
+
+<p>Developing the Python version of the ranking code took roughly 3 days. That includes writing the code, unit tests and documentation. Next, we<FP char="’">'</FP>ve spent approximately 2 weeks optimizing the code. One of the optimizations was translating the score expression (simple_gauss(time)*popularity) into an <URL url="https://docs.python.org/3/library/ast.html"><s>[</s>abstract syntax tree<e>](https://docs.python.org/3/library/ast.html)</e></URL>. We also implemented caching logic which pre-computed the score for certain times in the future.</p>
+
+<p>In contrast, developing the Go version of this code took roughly 4 days. The performance didn<FP char="’">'</FP>t require any further optimization. So while the initial bit of development was faster in Python, the Go based version ultimately required substantially less work from our team. As an added benefit, the Go code performed roughly 40 times faster than our highly-optimized Python code.</p>
+
+<p>Now, this is just a single example of the performance gains we<FP char="’">'</FP>ve experienced by switching to Go. It is, of course, comparing apples to oranges:</p>
+
+<LIST><LI><s>-   </s>The ranking code was my first project in Go</LI>
+<LI><s>-   </s>The Go code was built after the Python code, so the use case was better understood</LI>
+<LI><s>-   </s>The Go library for expression parsing was of exceptional quality</LI></LIST>
+
+<p>Your mileage will vary. Some other components of our system took substantially more time to build in Go compared to Python. As a general trend, we see that <EM><s>*</s>developing<e>*</e></EM> Go code takes slightly more effort. However, we spend much less time <EM><s>*</s>optimizing<e>*</e></EM> the code for performance.</p>
+
+<H2>Elixir vs Go - The Runner Up<e>
+----------------------------</e></H2>
+
+<p>Another language we evaluated is <URL url="https://elixir-lang.org/"><s>[</s>Elixir<e>](https://elixir-lang.org/)</e></URL>. Elixir is built on top of the Erlang virtual machine. It<FP char="’">'</FP>s a fascinating language and we considered it since one of our team members has a ton of experience with Erlang.</p>
+
+<p>For our use cases, we noticed that Go<FP char="’">'</FP>s raw performance is much better. Both Go and Elixir will do a great job serving thousands of concurrent requests. However, if you look at individual request performance, Go is substantially faster for our use case. Another reason why we chose Go over Elixir was the ecosystem. For the components we required, Go had more mature libraries whereas, in many cases, the Elixir libraries weren<FP char="’">'</FP>t ready for production usage. It<FP char="’">'</FP>s also harder to train/find developers to work with Elixir.</p>
+
+<p>These reasons tipped the balance in favor of Go. The Phoenix framework for Elixir looks awesome though and is definitely worth a look.</p>
+
+<H2>Conclusion<e>
+----------</e></H2>
+
+<p>Go is a very performant language with great support for concurrency. It is almost as fast as languages like C++ and Java. While it does take a bit more time to build things using Go compared to Python or Ruby, you<FP char="’">'</FP>ll save a ton of time spent on optimizing the code.</p>
+
+<p>We have a small development team at <URL url="https://getstream.io/team/"><s>[</s>Stream<e>](https://getstream.io/team/)</e></URL> powering feeds and <URL url="https://getstream.io/chat/"><s>[</s>chat<e>](https://getstream.io/chat/)</e></URL> for over 500 million end users. Go<FP char="’">'</FP>s combination of a great ecosystem, easy onboarding for new developers, fast performance, solid support for concurrency and a productive programming environment make it a great choice.</p>
+
+<p>Stream still leverages Python for our dashboard, site and machine learning for <URL url="https://getstream.io/personalization"><s>[</s>personalized feeds<e>](https://getstream.io/personalization)</e></URL>. We won<FP char="’">'</FP>t be saying goodbye to Python anytime soon, but going forward all performance-intensive code will be written in Go. Our new <URL url="https://getstream.io/chat/"><s>[</s>Chat API<e>](https://getstream.io/chat/)</e></URL>is also written entirely in Go.</p>
+
+<p>If you want to learn more about Go check out the blog posts listed below. To learn more about Stream, <URL url="https://getstream.io/get_started/"><s>[</s>this interactive tutorial<e>](https://getstream.io/get_started/)</e></URL> is a great starting point.</p>
+
+<H2>More Reading about Switching to Golang<e>
+--------------------------------------</e></H2>
+
+<LIST><LI><s>-   </s>&lt;<URL url="https://movio.co/en/blog/migrate-Scala-to-Go/">https://movio.co/en/blog/migrate-Scala-to-Go/</URL>&gt;</LI>
+<LI><s>-   </s>&lt;<URL url="https://hackernoon.com/why-i-love-golang-90085898b4f7">https://hackernoon.com/why-i-love-golang-90085898b4f7</URL>&gt;</LI>
+<LI><s>-   </s>&lt;<URL url="https://sendgrid.com/blog/convince-company-go-golang/">https://sendgrid.com/blog/convince-company-go-golang/</URL>&gt;</LI>
+<LI><s>-   </s>&lt;<URL url="https://dave.cheney.net/2017/03/20/why-go">https://dave.cheney.net/2017/03/20/why-go</URL>&gt;</LI></LIST>
+
+<H2>Learning Go<e>
+-----------</e></H2>
+
+<LIST><LI><s>-   </s>&lt;<URL url="https://learnxinyminutes.com/docs/go/">https://learnxinyminutes.com/docs/go/</URL>&gt;</LI>
+<LI><s>-   </s>&lt;<URL url="https://tour.golang.org/">https://tour.golang.org/</URL>&gt;</LI>
+<LI><s>-   </s>&lt;<URL url="http://howistart.org/posts/go/1/">http://howistart.org/posts/go/1/</URL>&gt;</LI>
+<LI><s>-   </s>&lt;<URL url="https://getstream.io/blog/building-a-performant-api-using-go-and-cassandra/">https://getstream.io/blog/building-a-performant-api-using-go-and-cassandra/</URL>&gt;</LI>
+<LI><s>-   </s>&lt;<AMAZON id="0134190440"><URL url="https://www.amazon.com/gp/product/0134190440">https://www.amazon.com/gp/product/0134190440</URL>&gt;</AMAZON></LI>
+<LI><s>-   </s><URL url="https://getstream.io/blog/go-1-11-rocket-tutorial/"><s>[</s>Go Rocket Tutorial<e>](https://getstream.io/blog/go-1-11-rocket-tutorial/)</e></URL></LI></LIST>
+
+<p>Tags: <URL url="https://getstream.io/blog/tag/go/"><s>[</s>go<e>](https://getstream.io/blog/tag/go/)</e></URL>, <URL url="https://getstream.io/blog/tag/golang/"><s>[</s>golang<e>](https://getstream.io/blog/tag/golang/)</e></URL>, <URL url="https://getstream.io/blog/tag/grpc/"><s>[</s>grpc<e>](https://getstream.io/blog/tag/grpc/)</e></URL>, <URL url="https://getstream.io/blog/tag/micro-services/"><s>[</s>micro services<e>](https://getstream.io/blog/tag/micro-services/)</e></URL>, <URL url="https://getstream.io/blog/tag/performance/"><s>[</s>performance<e>](https://getstream.io/blog/tag/performance/)</e></URL>, <URL url="https://getstream.io/blog/tag/python/"><s>[</s>python<e>](https://getstream.io/blog/tag/python/)</e></URL>, <URL url="https://getstream.io/blog/tag/scalability/"><s>[</s>scalability<e>](https://getstream.io/blog/tag/scalability/)</e></URL></p></r>, ?, ?)) in /var/www/flarum/vendor/illuminate/database/Connection.php:664
+Stack trace:
+#0 /var/www/flarum/vendor/illuminate/database/Connection.php(624): Illuminate\Database\Connection->runQueryCallback('insert into `po...', Array, Object(Closure))
+#1 /var/www/flarum/vendor/illuminate/database/Connection.php(459): Illuminate\Database\Connection->run('insert into `po...', Array, Object(Closure))
+#2 /var/www/flarum/vendor/illuminate/database/Connection.php(411): Illuminate\Database\Connection->statement('insert into `po...', Array)
+#3 /var/www/flarum/vendor/illuminate/database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `po...', Array)
+#4 /var/www/flarum/vendor/illuminate/database/Query/Builder.php(2628): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `po...', Array, 'id')
+#5 /var/www/flarum/vendor/illuminate/database/Eloquent/Builder.php(1338): Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 /var/www/flarum/vendor/illuminate/database/Eloquent/Model.php(823): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#7 /var/www/flarum/vendor/illuminate/database/Eloquent/Model.php(788): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#8 /var/www/flarum/vendor/illuminate/database/Eloquent/Model.php(651): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#9 /var/www/flarum/vendor/flarum/core/src/Post/Command/PostReplyHandler.php(104): Illuminate\Database\Eloquent\Model->save()
+#10 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(90): Flarum\Post\Command\PostReplyHandler->handle(Object(Flarum\Post\Command\PostReply))
+#11 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(128): Illuminate\Bus\Dispatcher->Illuminate\Bus\{closure}(Object(Flarum\Post\Command\PostReply))
+#12 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(104): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Flarum\Post\Command\PostReply))
+#13 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(98): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#14 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(76): Illuminate\Bus\Dispatcher->dispatchNow(Object(Flarum\Post\Command\PostReply))
+#15 /var/www/flarum/vendor/flarum/core/src/Discussion/Command/StartDiscussionHandler.php(85): Illuminate\Bus\Dispatcher->dispatch(Object(Flarum\Post\Command\PostReply))
+#16 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(90): Flarum\Discussion\Command\StartDiscussionHandler->handle(Object(Flarum\Discussion\Command\StartDiscussion))
+#17 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(128): Illuminate\Bus\Dispatcher->Illuminate\Bus\{closure}(Object(Flarum\Discussion\Command\StartDiscussion))
+#18 /var/www/flarum/vendor/illuminate/pipeline/Pipeline.php(104): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Flarum\Discussion\Command\StartDiscussion))
+#19 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(98): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /var/www/flarum/vendor/illuminate/bus/Dispatcher.php(76): Illuminate\Bus\Dispatcher->dispatchNow(Object(Flarum\Discussion\Command\StartDiscussion))
+#21 /var/www/flarum/vendor/flarum/core/src/Api/Controller/CreateDiscussionController.php(73): Illuminate\Bus\Dispatcher->dispatch(Object(Flarum\Discussion\Command\StartDiscussion))
+#22 /var/www/flarum/vendor/flarum/core/src/Api/Controller/AbstractSerializeController.php(98): Flarum\Api\Controller\CreateDiscussionController->data(Object(Zend\Diactoros\ServerRequest), Object(Tobscure\JsonApi\Document))
+#23 /var/www/flarum/vendor/flarum/core/src/Api/Controller/AbstractCreateController.php(24): Flarum\Api\Controller\AbstractSerializeController->handle(Object(Zend\Diactoros\ServerRequest))
+#24 /var/www/flarum/vendor/flarum/core/src/Http/RouteHandlerFactory.php(40): Flarum\Api\Controller\AbstractCreateController->handle(Object(Zend\Diactoros\ServerRequest))
+#25 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/DispatchRoute.php(67): Flarum\Http\RouteHandlerFactory->Flarum\Http\{closure}(Object(Zend\Diactoros\ServerRequest), Array)
+#26 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\DispatchRoute->process(Object(Zend\Diactoros\ServerRequest), Object(Closure))
+#27 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/SetLocale.php(51): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#28 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\SetLocale->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#29 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/CheckCsrfToken.php(33): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#30 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\CheckCsrfToken->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#31 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/AuthenticateWithHeader.php(56): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#32 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\AuthenticateWithHeader->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#33 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/AuthenticateWithSession.php(34): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#34 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\AuthenticateWithSession->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#35 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/RememberFromCookie.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#36 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\RememberFromCookie->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#37 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/StartSession.php(62): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#38 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\StartSession->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#39 /var/www/flarum/vendor/flarum/core/src/Api/Middleware/FakeHttpMethods.php(31): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#40 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Api\Middleware\FakeHttpMethods->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#41 /var/www/flarum/vendor/flarum/core/src/Http/Middleware/ParseJsonBody.php(29): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#42 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Http\Middleware\ParseJsonBody->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#43 /var/www/flarum/vendor/flarum/core/src/Api/Middleware/HandleErrors.php(42): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#44 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Flarum\Api\Middleware\HandleErrors->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#45 /var/www/flarum/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#46 /var/www/flarum/vendor/middlewares/request-handler/src/RequestHandler.php(84): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#47 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Middlewares\RequestHandler->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#48 /var/www/flarum/vendor/middlewares/base-path-router/src/BasePathRouter.php(97): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#49 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Middlewares\BasePathRouter->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#50 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Middleware/OriginalMessages.php(41): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#51 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Zend\Stratigility\Middleware\OriginalMessages->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#52 /var/www/flarum/vendor/middlewares/base-path/src/BasePath.php(53): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#53 /var/www/flarum/vendor/zendframework/zend-stratigility/src/Next.php(60): Middlewares\BasePath->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#54 /var/www/flarum/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#55 /var/www/flarum/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#56 /var/www/flarum/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#57 /var/www/flarum/vendor/flarum/core/src/Http/Server.php(46): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#58 /var/www/flarum/public/index.php(23): Flarum\Http\Server->listen()
+#59 {main}  

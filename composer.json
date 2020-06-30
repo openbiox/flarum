@@ -25,6 +25,7 @@
         "clarkwinkelmann/flarum-ext-emojionearea": "^0.2.0",
         "csineneo/lang-simplified-chinese": "v0.1.0-beta.8.27",
         "flagrow/sitemap": "^0.2.0",
+        "flagrow/upload": "^0.7.1",
         "flarum/approval": "^0.1.0",
         "flarum/auth-facebook": "^0.1.0",
         "flarum/auth-github": "^0.1.0",

@@ -281,28 +281,28 @@
     },
     {
         "name": "components/font-awesome",
-        "version": "5.4.2",
-        "version_normalized": "5.4.2.0",
+        "version": "5.9.0",
+        "version_normalized": "5.9.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/components/font-awesome.git",
-            "reference": "2273b93337e2296539665c40520308207b35ff6d"
+            "reference": "1be57c473b964c8130f2dbd9edc4f64db5394114"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/components/font-awesome/zipball/2273b93337e2296539665c40520308207b35ff6d",
-            "reference": "2273b93337e2296539665c40520308207b35ff6d",
+            "url": "https://api.github.com/repos/components/font-awesome/zipball/1be57c473b964c8130f2dbd9edc4f64db5394114",
+            "reference": "1be57c473b964c8130f2dbd9edc4f64db5394114",
             "shasum": ""
         },
-        "time": "2018-10-31T11:12:29+00:00",
+        "time": "2019-06-07T02:02:10+00:00",
         "type": "component",
         "extra": {
             "component": {
                 "styles": [
-                    "css/fontawesome-all.css"
+                    "css/all.css"
                 ],
                 "files": [
-                    "css/fontawesome-all.min.css",
+                    "css/all.min.css",
                     "webfonts/*"
                 ]
             }
@@ -733,23 +733,26 @@
     },
     {
         "name": "doctrine/lexer",
-        "version": "v1.0.1",
-        "version_normalized": "1.0.1.0",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/doctrine/lexer.git",
-            "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c"
+            "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/lexer/zipball/83893c552fd2045dd78aef794c31e694c37c0b8c",
-            "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c",
+            "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+            "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.2"
         },
-        "time": "2014-09-09T13:34:57+00:00",
+        "require-dev": {
+            "phpunit/phpunit": "^4.5"
+        },
+        "time": "2019-06-08T11:03:04+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -758,8 +761,8 @@
         },
         "installation-source": "dist",
         "autoload": {
-            "psr-0": {
-                "Doctrine\\Common\\Lexer\\": "lib/"
+            "psr-4": {
+                "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -780,26 +783,29 @@
                 "email": "schmittjoh@gmail.com"
             }
         ],
-        "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
-        "homepage": "http://www.doctrine-project.org",
+        "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
+        "homepage": "https://www.doctrine-project.org/projects/lexer.html",
         "keywords": [
+            "annotations",
+            "docblock",
             "lexer",
-            "parser"
+            "parser",
+            "php"
         ]
     },
     {
         "name": "egulias/email-validator",
-        "version": "2.1.8",
-        "version_normalized": "2.1.8.0",
+        "version": "2.1.9",
+        "version_normalized": "2.1.9.0",
         "source": {
             "type": "git",
             "url": "https://github.com/egulias/EmailValidator.git",
-            "reference": "c26463ff9241f27907112fbcd0c86fa670cfef98"
+            "reference": "128cc721d771ec2c46ce59698f4ca42b73f71b25"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/c26463ff9241f27907112fbcd0c86fa670cfef98",
-            "reference": "c26463ff9241f27907112fbcd0c86fa670cfef98",
+            "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/128cc721d771ec2c46ce59698f4ca42b73f71b25",
+            "reference": "128cc721d771ec2c46ce59698f4ca42b73f71b25",
             "shasum": ""
         },
         "require": {
@@ -814,7 +820,7 @@
         "suggest": {
             "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
         },
-        "time": "2019-05-16T22:02:54+00:00",
+        "time": "2019-06-23T10:14:27+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -948,17 +954,17 @@
     },
     {
         "name": "filp/whoops",
-        "version": "2.3.1",
-        "version_normalized": "2.3.1.0",
+        "version": "2.4.1",
+        "version_normalized": "2.4.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/filp/whoops.git",
-            "reference": "bc0fd11bc455cc20ee4b5edabc63ebbf859324c7"
+            "reference": "6fb502c23885701a991b0bba974b1a8eb6673577"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/filp/whoops/zipball/bc0fd11bc455cc20ee4b5edabc63ebbf859324c7",
-            "reference": "bc0fd11bc455cc20ee4b5edabc63ebbf859324c7",
+            "url": "https://api.github.com/repos/filp/whoops/zipball/6fb502c23885701a991b0bba974b1a8eb6673577",
+            "reference": "6fb502c23885701a991b0bba974b1a8eb6673577",
             "shasum": ""
         },
         "require": {
@@ -974,7 +980,7 @@
             "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
             "whoops/soap": "Formats errors as SOAP responses"
         },
-        "time": "2018-10-23T09:00:00+00:00",
+        "time": "2019-07-04T09:00:00+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1068,6 +1074,80 @@
         ]
     },
     {
+        "name": "flagrow/upload",
+        "version": "0.7.1",
+        "version_normalized": "0.7.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/flagrow/upload.git",
+            "reference": "57dc8c7be8b55d7f15666c3f40cdb68cdeffb69f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/flagrow/upload/zipball/57dc8c7be8b55d7f15666c3f40cdb68cdeffb69f",
+            "reference": "57dc8c7be8b55d7f15666c3f40cdb68cdeffb69f",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.8",
+            "ramsey/uuid": "^3.5.2"
+        },
+        "require-dev": {
+            "flagrow/steamroller": "dev-master",
+            "league/flysystem": "^1.0.32",
+            "league/flysystem-aws-s3-v3": "^1.0",
+            "techyah/flysystem-ovh": "^1.0"
+        },
+        "suggest": {
+            "league/flysystem-aws-s3-v3": "Uploads to AWS S3 using API version 3.",
+            "techyah/flysystem-ovh": "Uploads to OVH Swift vfs using API."
+        },
+        "time": "2018-12-18T15:22:53+00:00",
+        "type": "flarum-extension",
+        "extra": {
+            "flarum-extension": {
+                "title": "Upload",
+                "icon": {
+                    "image": "resources/logo.svg",
+                    "backgroundColor": "#5f4bb6",
+                    "backgroundSize": "90%",
+                    "backgroundRepeat": "no-repeat",
+                    "backgroundPosition": "center"
+                }
+            },
+            "flagrow": {
+                "discuss": "https://discuss.flarum.org/d/4154"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Flagrow\\Upload\\": "src/"
+            },
+            "files": [
+                "src/Helpers/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Daniël Klabbers",
+                "email": "daniel@klabbers.email",
+                "homepage": "http://luceos.com"
+            }
+        ],
+        "description": "The file upload extension for the Flarum forum with insane intelligence.",
+        "keywords": [
+            "file",
+            "flagrow",
+            "flarum",
+            "upload"
+        ]
+    },
+    {
         "name": "flarum/approval",
         "version": "v0.1.0-beta.8",
         "version_normalized": "0.1.0.0-beta8",
@@ -1124,24 +1204,24 @@
     },
     {
         "name": "flarum/auth-facebook",
-        "version": "v0.1.0-beta.8",
-        "version_normalized": "0.1.0.0-beta8",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/auth-facebook.git",
-            "reference": "f266439277a6b5412d777007894ff0619ef5cc1f"
+            "reference": "1852a42b39722a97694db782e55b3184a213c692"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/auth-facebook/zipball/f266439277a6b5412d777007894ff0619ef5cc1f",
-            "reference": "f266439277a6b5412d777007894ff0619ef5cc1f",
+            "url": "https://api.github.com/repos/flarum/auth-facebook/zipball/1852a42b39722a97694db782e55b3184a213c692",
+            "reference": "1852a42b39722a97694db782e55b3184a213c692",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8",
+            "flarum/core": "^0.1.0-beta.9",
             "league/oauth2-facebook": "^2.0"
         },
-        "time": "2018-11-21T08:23:48+00:00",
+        "time": "2019-06-24T10:03:41+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1179,24 +1259,24 @@
     },
     {
         "name": "flarum/auth-github",
-        "version": "v0.1.0-beta.8",
-        "version_normalized": "0.1.0.0-beta8",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/auth-github.git",
-            "reference": "bb749145fad46e85ba4739275b9ae4fa99e0c4e7"
+            "reference": "8723489c880c2cbea33c4b0596c7fb702d9b98d1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/auth-github/zipball/bb749145fad46e85ba4739275b9ae4fa99e0c4e7",
-            "reference": "bb749145fad46e85ba4739275b9ae4fa99e0c4e7",
+            "url": "https://api.github.com/repos/flarum/auth-github/zipball/8723489c880c2cbea33c4b0596c7fb702d9b98d1",
+            "reference": "8723489c880c2cbea33c4b0596c7fb702d9b98d1",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8",
+            "flarum/core": "^0.1.0-beta.9",
             "league/oauth2-github": "^2.0"
         },
-        "time": "2018-11-21T08:23:50+00:00",
+        "time": "2019-06-24T10:03:32+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1234,24 +1314,24 @@
     },
     {
         "name": "flarum/auth-twitter",
-        "version": "v0.1.0-beta.8",
-        "version_normalized": "0.1.0.0-beta8",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/auth-twitter.git",
-            "reference": "c928d9b5c75137f9e635e05bdb1db978c57e92dc"
+            "reference": "e4f40a0ee1a3ca24c438cde82c45f2d658153343"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/auth-twitter/zipball/c928d9b5c75137f9e635e05bdb1db978c57e92dc",
-            "reference": "c928d9b5c75137f9e635e05bdb1db978c57e92dc",
+            "url": "https://api.github.com/repos/flarum/auth-twitter/zipball/e4f40a0ee1a3ca24c438cde82c45f2d658153343",
+            "reference": "e4f40a0ee1a3ca24c438cde82c45f2d658153343",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8",
+            "flarum/core": "^0.1.0-beta.9",
             "league/oauth1-client": "^1.6"
         },
-        "time": "2018-11-21T08:27:14+00:00",
+        "time": "2019-06-24T10:03:21+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1338,39 +1418,39 @@
     },
     {
         "name": "flarum/core",
-        "version": "v0.1.0-beta.8.1",
-        "version_normalized": "0.1.0.0-beta8.1",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/core.git",
-            "reference": "bbe62f400fd849f1f86ce7a4931c59fab4aec6fc"
+            "reference": "a720f6f65118e0389ffd7b14c43b6ea33821bccc"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/core/zipball/bbe62f400fd849f1f86ce7a4931c59fab4aec6fc",
-            "reference": "bbe62f400fd849f1f86ce7a4931c59fab4aec6fc",
+            "url": "https://api.github.com/repos/flarum/core/zipball/a720f6f65118e0389ffd7b14c43b6ea33821bccc",
+            "reference": "a720f6f65118e0389ffd7b14c43b6ea33821bccc",
             "shasum": ""
         },
         "require": {
             "axy/sourcemap": "^0.1.4",
-            "components/font-awesome": "^5.4.2",
+            "components/font-awesome": "5.9.*",
             "dflydev/fig-cookies": "^1.0.2",
             "doctrine/dbal": "^2.7",
             "franzl/whoops-middleware": "^0.4.0",
-            "illuminate/bus": "5.5.*",
-            "illuminate/cache": "5.5.*",
-            "illuminate/config": "5.5.*",
-            "illuminate/container": "5.5.*",
-            "illuminate/contracts": "5.5.*",
-            "illuminate/database": "5.5.*",
-            "illuminate/events": "5.5.*",
-            "illuminate/filesystem": "5.5.*",
-            "illuminate/hashing": "5.5.*",
-            "illuminate/mail": "5.5.*",
-            "illuminate/session": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "illuminate/validation": "5.5.*",
-            "illuminate/view": "5.5.*",
+            "illuminate/bus": "5.7.*",
+            "illuminate/cache": "5.7.*",
+            "illuminate/config": "5.7.*",
+            "illuminate/container": "5.7.*",
+            "illuminate/contracts": "5.7.*",
+            "illuminate/database": "5.7.*",
+            "illuminate/events": "5.7.*",
+            "illuminate/filesystem": "5.7.*",
+            "illuminate/hashing": "5.7.*",
+            "illuminate/mail": "5.7.*",
+            "illuminate/session": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "illuminate/validation": "5.7.*",
+            "illuminate/view": "5.7.*",
             "intervention/image": "^2.3.0",
             "league/flysystem": "^1.0.11",
             "matthiasmullie/minify": "^1.3",
@@ -1386,8 +1466,7 @@
             "psr/http-server-middleware": "^1.0",
             "s9e/text-formatter": "^1.2.0",
             "symfony/config": "^3.3",
-            "symfony/console": "^3.3",
-            "symfony/http-foundation": "^3.3",
+            "symfony/console": "^4.2",
             "symfony/translation": "^3.3",
             "symfony/yaml": "^3.3",
             "tobscure/json-api": "^0.3.0",
@@ -1399,7 +1478,7 @@
             "mockery/mockery": "^0.9.4",
             "phpunit/phpunit": "^6.0"
         },
-        "time": "2018-12-05T23:47:38+00:00",
+        "time": "2019-07-05T10:37:02+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1486,23 +1565,23 @@
     },
     {
         "name": "flarum/flags",
-        "version": "v0.1.0-beta.8.1",
-        "version_normalized": "0.1.0.0-beta8.1",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/flags.git",
-            "reference": "93c72cc864b6befc641df709ca90f89adae612f6"
+            "reference": "6ed3da0a08f64603a9906163643b1f21c16a4cd8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/flags/zipball/93c72cc864b6befc641df709ca90f89adae612f6",
-            "reference": "93c72cc864b6befc641df709ca90f89adae612f6",
+            "url": "https://api.github.com/repos/flarum/flags/zipball/6ed3da0a08f64603a9906163643b1f21c16a4cd8",
+            "reference": "6ed3da0a08f64603a9906163643b1f21c16a4cd8",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2018-12-03T23:46:33+00:00",
+        "time": "2019-06-24T10:02:29+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1540,23 +1619,23 @@
     },
     {
         "name": "flarum/lang-english",
-        "version": "v0.1.0-beta.8",
-        "version_normalized": "0.1.0.0-beta8",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/lang-english.git",
-            "reference": "3ec1647c0860c17aaa74870983c18dd0106fe9d7"
+            "reference": "f9db53474e9a40fbd6ca4ab298e7fe8bc99ff5f0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/lang-english/zipball/3ec1647c0860c17aaa74870983c18dd0106fe9d7",
-            "reference": "3ec1647c0860c17aaa74870983c18dd0106fe9d7",
+            "url": "https://api.github.com/repos/flarum/lang-english/zipball/f9db53474e9a40fbd6ca4ab298e7fe8bc99ff5f0",
+            "reference": "f9db53474e9a40fbd6ca4ab298e7fe8bc99ff5f0",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2018-11-22T06:02:09+00:00",
+        "time": "2019-06-24T11:33:24+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1588,23 +1667,23 @@
     },
     {
         "name": "flarum/likes",
-        "version": "v0.1.0-beta.8.1",
-        "version_normalized": "0.1.0.0-beta8.1",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/likes.git",
-            "reference": "1959948594b0dc2daf987b70c442d6970f8aad7b"
+            "reference": "7bc3a514c6048b857b6fe57b901291c97319f733"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/likes/zipball/1959948594b0dc2daf987b70c442d6970f8aad7b",
-            "reference": "1959948594b0dc2daf987b70c442d6970f8aad7b",
+            "url": "https://api.github.com/repos/flarum/likes/zipball/7bc3a514c6048b857b6fe57b901291c97319f733",
+            "reference": "7bc3a514c6048b857b6fe57b901291c97319f733",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2018-12-03T23:51:00+00:00",
+        "time": "2019-06-24T10:07:38+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1642,23 +1721,23 @@
     },
     {
         "name": "flarum/lock",
-        "version": "v0.1.0-beta.8",
-        "version_normalized": "0.1.0.0-beta8",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/lock.git",
-            "reference": "55d8589f36e5e87fc08c5eb32f34e610665038c2"
+            "reference": "f76c814324b35726e0041938e263001d9c2658f6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/lock/zipball/55d8589f36e5e87fc08c5eb32f34e610665038c2",
-            "reference": "55d8589f36e5e87fc08c5eb32f34e610665038c2",
+            "url": "https://api.github.com/repos/flarum/lock/zipball/f76c814324b35726e0041938e263001d9c2658f6",
+            "reference": "f76c814324b35726e0041938e263001d9c2658f6",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2018-11-27T12:03:38+00:00",
+        "time": "2019-06-24T10:05:54+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1696,23 +1775,23 @@
     },
     {
         "name": "flarum/markdown",
-        "version": "v0.1.0-beta.8",
-        "version_normalized": "0.1.0.0-beta8",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/markdown.git",
-            "reference": "fd67301b9eb18009bf548ffa601d0d61b8d71e8b"
+            "reference": "ff6829a8399401fc466aedaa87eeeed4f2634cc5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/markdown/zipball/fd67301b9eb18009bf548ffa601d0d61b8d71e8b",
-            "reference": "fd67301b9eb18009bf548ffa601d0d61b8d71e8b",
+            "url": "https://api.github.com/repos/flarum/markdown/zipball/ff6829a8399401fc466aedaa87eeeed4f2634cc5",
+            "reference": "ff6829a8399401fc466aedaa87eeeed4f2634cc5",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2018-11-21T08:27:14+00:00",
+        "time": "2019-06-24T10:01:37+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1748,23 +1827,23 @@
     },
     {
         "name": "flarum/mentions",
-        "version": "v0.1.0-beta.8.1",
-        "version_normalized": "0.1.0.0-beta8.1",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/mentions.git",
-            "reference": "af80a637a0d7b5250150e9f6ba52512decb709a7"
+            "reference": "35c81a55e146dbb78870461861605653deb64cc5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/mentions/zipball/af80a637a0d7b5250150e9f6ba52512decb709a7",
-            "reference": "af80a637a0d7b5250150e9f6ba52512decb709a7",
+            "url": "https://api.github.com/repos/flarum/mentions/zipball/35c81a55e146dbb78870461861605653deb64cc5",
+            "reference": "35c81a55e146dbb78870461861605653deb64cc5",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2018-12-03T23:43:48+00:00",
+        "time": "2019-06-24T10:01:04+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1802,24 +1881,24 @@
     },
     {
         "name": "flarum/pusher",
-        "version": "v0.1.0-beta.8.1",
-        "version_normalized": "0.1.0.0-beta8.1",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/pusher.git",
-            "reference": "657c69890674e81f6f225e7962940f25122c5d9a"
+            "reference": "ad0691e9563f8faea718ba41b01662088959e12e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/pusher/zipball/657c69890674e81f6f225e7962940f25122c5d9a",
-            "reference": "657c69890674e81f6f225e7962940f25122c5d9a",
+            "url": "https://api.github.com/repos/flarum/pusher/zipball/ad0691e9563f8faea718ba41b01662088959e12e",
+            "reference": "ad0691e9563f8faea718ba41b01662088959e12e",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8",
+            "flarum/core": "^0.1.0-beta.9",
             "pusher/pusher-php-server": "^2.2"
         },
-        "time": "2018-12-03T23:52:29+00:00",
+        "time": "2019-06-24T10:04:40+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1860,23 +1939,23 @@
     },
     {
         "name": "flarum/statistics",
-        "version": "v0.1.0-beta.8",
-        "version_normalized": "0.1.0.0-beta8",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/statistics.git",
-            "reference": "1d2c81d0c7d9eb1563e073f5acb949234c3eea88"
+            "reference": "45267f4e6c4d99dfe75cfb215bf05cf278e4a88e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/statistics/zipball/1d2c81d0c7d9eb1563e073f5acb949234c3eea88",
-            "reference": "1d2c81d0c7d9eb1563e073f5acb949234c3eea88",
+            "url": "https://api.github.com/repos/flarum/statistics/zipball/45267f4e6c4d99dfe75cfb215bf05cf278e4a88e",
+            "reference": "45267f4e6c4d99dfe75cfb215bf05cf278e4a88e",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2018-11-22T20:59:37+00:00",
+        "time": "2019-06-24T10:04:33+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1914,23 +1993,23 @@
     },
     {
         "name": "flarum/sticky",
-        "version": "v0.1.0-beta.8",
-        "version_normalized": "0.1.0.0-beta8",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/sticky.git",
-            "reference": "c85e9a0191da8004f54f2a1916e41471f83f19ca"
+            "reference": "5890a1ad372bd9ef23e2ac7bd6d3639e37be1b81"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/sticky/zipball/c85e9a0191da8004f54f2a1916e41471f83f19ca",
-            "reference": "c85e9a0191da8004f54f2a1916e41471f83f19ca",
+            "url": "https://api.github.com/repos/flarum/sticky/zipball/5890a1ad372bd9ef23e2ac7bd6d3639e37be1b81",
+            "reference": "5890a1ad372bd9ef23e2ac7bd6d3639e37be1b81",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2018-11-27T12:04:00+00:00",
+        "time": "2019-06-24T10:04:24+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -1968,23 +2047,23 @@
     },
     {
         "name": "flarum/subscriptions",
-        "version": "v0.1.0-beta.8",
-        "version_normalized": "0.1.0.0-beta8",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/subscriptions.git",
-            "reference": "7fae63a5279aed01678d01e23d293817ce115466"
+            "reference": "e0014ecbbf889a27c4136f60e4810385971c2c5e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/subscriptions/zipball/7fae63a5279aed01678d01e23d293817ce115466",
-            "reference": "7fae63a5279aed01678d01e23d293817ce115466",
+            "url": "https://api.github.com/repos/flarum/subscriptions/zipball/e0014ecbbf889a27c4136f60e4810385971c2c5e",
+            "reference": "e0014ecbbf889a27c4136f60e4810385971c2c5e",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2018-11-21T11:34:52+00:00",
+        "time": "2019-06-24T10:04:17+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -2022,23 +2101,23 @@
     },
     {
         "name": "flarum/suspend",
-        "version": "v0.1.0-beta.8",
-        "version_normalized": "0.1.0.0-beta8",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/suspend.git",
-            "reference": "fcb2d4657af3123d2a8a3d0e223b43df0ed1b7a3"
+            "reference": "102ed0f692c06c07dbc60b199edaaa80595921b0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/suspend/zipball/fcb2d4657af3123d2a8a3d0e223b43df0ed1b7a3",
-            "reference": "fcb2d4657af3123d2a8a3d0e223b43df0ed1b7a3",
+            "url": "https://api.github.com/repos/flarum/suspend/zipball/102ed0f692c06c07dbc60b199edaaa80595921b0",
+            "reference": "102ed0f692c06c07dbc60b199edaaa80595921b0",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2018-11-21T08:27:15+00:00",
+        "time": "2019-06-24T10:03:49+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -2076,23 +2155,23 @@
     },
     {
         "name": "flarum/tags",
-        "version": "v0.1.0-beta.8.2",
-        "version_normalized": "0.1.0.0-beta8.2",
+        "version": "v0.1.0-beta.9",
+        "version_normalized": "0.1.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/flarum/tags.git",
-            "reference": "58af69d4ea320e22f9e7ba2e3fdf13e2cb5cb96e"
+            "reference": "50d5e117438813313c64d04d6eda6e1fe6867edb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/flarum/tags/zipball/58af69d4ea320e22f9e7ba2e3fdf13e2cb5cb96e",
-            "reference": "58af69d4ea320e22f9e7ba2e3fdf13e2cb5cb96e",
+            "url": "https://api.github.com/repos/flarum/tags/zipball/50d5e117438813313c64d04d6eda6e1fe6867edb",
+            "reference": "50d5e117438813313c64d04d6eda6e1fe6867edb",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9"
         },
-        "time": "2018-12-05T23:34:15+00:00",
+        "time": "2019-06-24T22:03:35+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -2126,6 +2205,60 @@
         "description": "Organize discussions into a hierarchy of tags and categories.",
         "keywords": [
             "discussion"
+        ]
+    },
+    {
+        "name": "fof/console",
+        "version": "0.5",
+        "version_normalized": "0.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfFlarum/console.git",
+            "reference": "77469b27f0a4586bc13287c614495645cc08632d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/console/zipball/77469b27f0a4586bc13287c614495645cc08632d",
+            "reference": "77469b27f0a4586bc13287c614495645cc08632d",
+            "shasum": ""
+        },
+        "require": {
+            "flarum/core": "^0.1.0-beta.9",
+            "illuminate/console": "5.7.*",
+            "mtdowling/cron-expression": "^1.2.1",
+            "symfony/process": "~4.0"
+        },
+        "time": "2019-06-03T11:28:27+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FoF\\Console\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Clark Winkelmann",
+                "email": "clark.winkelmann@gmail.com",
+                "homepage": "https://clarkwinkelmann.com/"
+            },
+            {
+                "name": "Daniël Klabbers",
+                "email": "daniel@klabbers.email",
+                "homepage": "http://luceos.com"
+            }
+        ],
+        "description": "Register custom commands and task scheduling into Flarum",
+        "keywords": [
+            "console",
+            "cron",
+            "cronjob",
+            "extension",
+            "flarum"
         ]
     },
     {
@@ -2247,17 +2380,17 @@
     },
     {
         "name": "fof/pages",
-        "version": "0.2.2",
-        "version_normalized": "0.2.2.0",
+        "version": "0.2.3",
+        "version_normalized": "0.2.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/FriendsOfFlarum/pages.git",
-            "reference": "91fac5d06cb3bee8bc50290c2bb218a5a10b7e63"
+            "reference": "a8ee38c40d2681633731e97a0bcf0f9b7ddecb85"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/FriendsOfFlarum/pages/zipball/91fac5d06cb3bee8bc50290c2bb218a5a10b7e63",
-            "reference": "91fac5d06cb3bee8bc50290c2bb218a5a10b7e63",
+            "url": "https://api.github.com/repos/FriendsOfFlarum/pages/zipball/a8ee38c40d2681633731e97a0bcf0f9b7ddecb85",
+            "reference": "a8ee38c40d2681633731e97a0bcf0f9b7ddecb85",
             "shasum": ""
         },
         "require": {
@@ -2266,7 +2399,7 @@
         "replace": {
             "sijad/flarum-ext-pages": "*"
         },
-        "time": "2019-01-31T16:49:09+00:00",
+        "time": "2019-06-14T20:17:41+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
@@ -2635,35 +2768,39 @@
     },
     {
         "name": "guzzlehttp/psr7",
-        "version": "1.5.2",
-        "version_normalized": "1.5.2.0",
+        "version": "1.6.1",
+        "version_normalized": "1.6.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/psr7.git",
-            "reference": "9f83dded91781a01c63574e387eaa769be769115"
+            "reference": "239400de7a173fe9901b9ac7c06497751f00727a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
-            "reference": "9f83dded91781a01c63574e387eaa769be769115",
+            "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
+            "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
             "shasum": ""
         },
         "require": {
             "php": ">=5.4.0",
             "psr/http-message": "~1.0",
-            "ralouphie/getallheaders": "^2.0.5"
+            "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
         },
         "provide": {
             "psr/http-message-implementation": "1.0"
         },
         "require-dev": {
+            "ext-zlib": "*",
             "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
         },
-        "time": "2018-12-04T20:46:45+00:00",
+        "suggest": {
+            "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
+        },
+        "time": "2019-07-01T23:21:34+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.5-dev"
+                "dev-master": "1.6-dev"
             }
         },
         "installation-source": "dist",
@@ -2704,30 +2841,30 @@
     },
     {
         "name": "illuminate/bus",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/bus.git",
-            "reference": "f0d87cca7c46c4b898677abf1e2881d75463fe49"
+            "reference": "5cad4bff635071ff07c317aad200a8c2169f264f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/bus/zipball/f0d87cca7c46c4b898677abf1e2881d75463fe49",
-            "reference": "f0d87cca7c46c4b898677abf1e2881d75463fe49",
+            "url": "https://api.github.com/repos/illuminate/bus/zipball/5cad4bff635071ff07c317aad200a8c2169f264f",
+            "reference": "5cad4bff635071ff07c317aad200a8c2169f264f",
             "shasum": ""
         },
         "require": {
-            "illuminate/contracts": "5.5.*",
-            "illuminate/pipeline": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0"
+            "illuminate/contracts": "5.7.*",
+            "illuminate/pipeline": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3"
         },
-        "time": "2017-12-14T13:29:55+00:00",
+        "time": "2019-02-11T13:48:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -2751,34 +2888,34 @@
     },
     {
         "name": "illuminate/cache",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/cache.git",
-            "reference": "5306a5d099395323d2e0c93beb12fa03c310d374"
+            "reference": "7998b137cc723dd5e68846ada33f8c0143f5b10f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/cache/zipball/5306a5d099395323d2e0c93beb12fa03c310d374",
-            "reference": "5306a5d099395323d2e0c93beb12fa03c310d374",
+            "url": "https://api.github.com/repos/illuminate/cache/zipball/7998b137cc723dd5e68846ada33f8c0143f5b10f",
+            "reference": "7998b137cc723dd5e68846ada33f8c0143f5b10f",
             "shasum": ""
         },
         "require": {
-            "illuminate/contracts": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0"
+            "illuminate/contracts": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3"
         },
         "suggest": {
-            "illuminate/database": "Required to use the database cache driver (5.5.*).",
-            "illuminate/filesystem": "Required to use the file cache driver (5.5.*).",
-            "illuminate/redis": "Required to use the redis cache driver (5.5.*)."
+            "illuminate/database": "Required to use the database cache driver (5.7.*).",
+            "illuminate/filesystem": "Required to use the file cache driver (5.7.*).",
+            "illuminate/redis": "Required to use the redis cache driver (5.7.*)."
         },
-        "time": "2018-01-26T01:40:49+00:00",
+        "time": "2019-02-11T13:48:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -2802,29 +2939,29 @@
     },
     {
         "name": "illuminate/config",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/config.git",
-            "reference": "2abd46c4948b474cb8ac08141f1c8359d93d5f2e"
+            "reference": "540e11b9ae058c9a94051d9ca6c02e40258c71fd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/config/zipball/2abd46c4948b474cb8ac08141f1c8359d93d5f2e",
-            "reference": "2abd46c4948b474cb8ac08141f1c8359d93d5f2e",
+            "url": "https://api.github.com/repos/illuminate/config/zipball/540e11b9ae058c9a94051d9ca6c02e40258c71fd",
+            "reference": "540e11b9ae058c9a94051d9ca6c02e40258c71fd",
             "shasum": ""
         },
         "require": {
-            "illuminate/contracts": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0"
+            "illuminate/contracts": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3"
         },
-        "time": "2017-06-26T13:15:04+00:00",
+        "time": "2019-02-11T13:48:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -2847,30 +2984,83 @@
         "homepage": "https://laravel.com"
     },
     {
-        "name": "illuminate/container",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "name": "illuminate/console",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/illuminate/container.git",
-            "reference": "7917f4c86ecf7f4d0efcfd83248ad3e301e08858"
+            "url": "https://github.com/illuminate/console.git",
+            "reference": "0d97b6ead0cbb09140b1e8317f5a9d9f69ff9ec6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/container/zipball/7917f4c86ecf7f4d0efcfd83248ad3e301e08858",
-            "reference": "7917f4c86ecf7f4d0efcfd83248ad3e301e08858",
+            "url": "https://api.github.com/repos/illuminate/console/zipball/0d97b6ead0cbb09140b1e8317f5a9d9f69ff9ec6",
+            "reference": "0d97b6ead0cbb09140b1e8317f5a9d9f69ff9ec6",
             "shasum": ""
         },
         "require": {
-            "illuminate/contracts": "5.5.*",
-            "php": ">=7.0",
-            "psr/container": "~1.0"
+            "illuminate/contracts": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3",
+            "symfony/console": "^4.1"
         },
-        "time": "2018-01-19T17:58:33+00:00",
+        "suggest": {
+            "dragonmantank/cron-expression": "Required to use scheduling component (^2.0).",
+            "guzzlehttp/guzzle": "Required to use the ping methods on schedules (^6.0).",
+            "symfony/process": "Required to use scheduling component (^4.1)."
+        },
+        "time": "2019-02-11T13:48:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Illuminate\\Console\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Taylor Otwell",
+                "email": "taylor@laravel.com"
+            }
+        ],
+        "description": "The Illuminate Console package.",
+        "homepage": "https://laravel.com"
+    },
+    {
+        "name": "illuminate/container",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/illuminate/container.git",
+            "reference": "8c3a75e464d59509ae88db152cab61a3f115b9ec"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/illuminate/container/zipball/8c3a75e464d59509ae88db152cab61a3f115b9ec",
+            "reference": "8c3a75e464d59509ae88db152cab61a3f115b9ec",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/contracts": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3",
+            "psr/container": "^1.0"
+        },
+        "time": "2019-02-11T13:48:57+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -2894,29 +3084,29 @@
     },
     {
         "name": "illuminate/contracts",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/contracts.git",
-            "reference": "b2a62b4a85485fca9cf5fa61a933ad64006ff528"
+            "reference": "b63324d349a8ae2156fbc2697c1ccc85879b3803"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/contracts/zipball/b2a62b4a85485fca9cf5fa61a933ad64006ff528",
-            "reference": "b2a62b4a85485fca9cf5fa61a933ad64006ff528",
+            "url": "https://api.github.com/repos/illuminate/contracts/zipball/b63324d349a8ae2156fbc2697c1ccc85879b3803",
+            "reference": "b63324d349a8ae2156fbc2697c1ccc85879b3803",
             "shasum": ""
         },
         "require": {
-            "php": ">=7.0",
-            "psr/container": "~1.0",
-            "psr/simple-cache": "~1.0"
+            "php": "^7.1.3",
+            "psr/container": "^1.0",
+            "psr/simple-cache": "^1.0"
         },
-        "time": "2018-03-20T15:34:35+00:00",
+        "time": "2019-02-12T07:46:48+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -2940,38 +3130,38 @@
     },
     {
         "name": "illuminate/database",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/database.git",
-            "reference": "f5403b3dd774eb89ff0ef5e633e57458c3dc537d"
+            "reference": "c0702cb8c665cab8d080a81de5a44ac672b26d62"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/database/zipball/f5403b3dd774eb89ff0ef5e633e57458c3dc537d",
-            "reference": "f5403b3dd774eb89ff0ef5e633e57458c3dc537d",
+            "url": "https://api.github.com/repos/illuminate/database/zipball/c0702cb8c665cab8d080a81de5a44ac672b26d62",
+            "reference": "c0702cb8c665cab8d080a81de5a44ac672b26d62",
             "shasum": ""
         },
         "require": {
-            "illuminate/container": "5.5.*",
-            "illuminate/contracts": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0"
+            "illuminate/container": "5.7.*",
+            "illuminate/contracts": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3"
         },
         "suggest": {
-            "doctrine/dbal": "Required to rename columns and drop SQLite columns (~2.5).",
-            "fzaninotto/faker": "Required to use the eloquent factory builder (~1.4).",
-            "illuminate/console": "Required to use the database commands (5.5.*).",
-            "illuminate/events": "Required to use the observers with Eloquent (5.5.*).",
-            "illuminate/filesystem": "Required to use the migrations (5.5.*).",
-            "illuminate/pagination": "Required to paginate the result set (5.5.*)."
+            "doctrine/dbal": "Required to rename columns and drop SQLite columns (^2.6).",
+            "fzaninotto/faker": "Required to use the eloquent factory builder (^1.4).",
+            "illuminate/console": "Required to use the database commands (5.7.*).",
+            "illuminate/events": "Required to use the observers with Eloquent (5.7.*).",
+            "illuminate/filesystem": "Required to use the migrations (5.7.*).",
+            "illuminate/pagination": "Required to paginate the result set (5.7.*)."
         },
-        "time": "2018-09-23T18:58:54+00:00",
+        "time": "2019-02-20T03:55:15+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -3001,30 +3191,30 @@
     },
     {
         "name": "illuminate/events",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/events.git",
-            "reference": "11b4b917c3f02140b528e849f883a4a9e7ff8af7"
+            "reference": "e48888062a9962f30c431524357b9a815b093609"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/events/zipball/11b4b917c3f02140b528e849f883a4a9e7ff8af7",
-            "reference": "11b4b917c3f02140b528e849f883a4a9e7ff8af7",
+            "url": "https://api.github.com/repos/illuminate/events/zipball/e48888062a9962f30c431524357b9a815b093609",
+            "reference": "e48888062a9962f30c431524357b9a815b093609",
             "shasum": ""
         },
         "require": {
-            "illuminate/container": "5.5.*",
-            "illuminate/contracts": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0"
+            "illuminate/container": "5.7.*",
+            "illuminate/contracts": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3"
         },
-        "time": "2017-12-14T13:29:55+00:00",
+        "time": "2019-02-11T13:48:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -3048,35 +3238,37 @@
     },
     {
         "name": "illuminate/filesystem",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/filesystem.git",
-            "reference": "b8c0e36d47cfde3a0727bc6e2057775ff98a1bcd"
+            "reference": "ff853e678a93996b1d0a3ddc6fc56c10bae0de30"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/filesystem/zipball/b8c0e36d47cfde3a0727bc6e2057775ff98a1bcd",
-            "reference": "b8c0e36d47cfde3a0727bc6e2057775ff98a1bcd",
+            "url": "https://api.github.com/repos/illuminate/filesystem/zipball/ff853e678a93996b1d0a3ddc6fc56c10bae0de30",
+            "reference": "ff853e678a93996b1d0a3ddc6fc56c10bae0de30",
             "shasum": ""
         },
         "require": {
-            "illuminate/contracts": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0",
-            "symfony/finder": "~3.3"
+            "illuminate/contracts": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3",
+            "symfony/finder": "^4.1"
         },
         "suggest": {
-            "league/flysystem": "Required to use the Flysystem local and FTP drivers (~1.0).",
-            "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (~1.0).",
-            "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0)."
+            "league/flysystem": "Required to use the Flysystem local and FTP drivers (^1.0).",
+            "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (^1.0).",
+            "league/flysystem-cached-adapter": "Required to use the Flysystem cache (^1.0).",
+            "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (^1.0).",
+            "league/flysystem-sftp": "Required to use the Flysystem SFTP driver (^1.0)."
         },
-        "time": "2018-02-07T00:04:00+00:00",
+        "time": "2019-02-11T13:48:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -3100,29 +3292,29 @@
     },
     {
         "name": "illuminate/hashing",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/hashing.git",
-            "reference": "6cabc9f2cf7ecc27cc5ad16e9ed3375a8c74a0ed"
+            "reference": "c56e2e6cedadeddb677702820bec3c08097b9e44"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/hashing/zipball/6cabc9f2cf7ecc27cc5ad16e9ed3375a8c74a0ed",
-            "reference": "6cabc9f2cf7ecc27cc5ad16e9ed3375a8c74a0ed",
+            "url": "https://api.github.com/repos/illuminate/hashing/zipball/c56e2e6cedadeddb677702820bec3c08097b9e44",
+            "reference": "c56e2e6cedadeddb677702820bec3c08097b9e44",
             "shasum": ""
         },
         "require": {
-            "illuminate/contracts": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0"
+            "illuminate/contracts": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3"
         },
-        "time": "2017-07-05T13:22:59+00:00",
+        "time": "2019-02-11T13:48:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -3146,38 +3338,38 @@
     },
     {
         "name": "illuminate/mail",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/mail.git",
-            "reference": "42302d779d1762c1ae7f872c92c16623a641c398"
+            "reference": "91ac88078b481f4b8bde7403f8bcb406be70769e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/mail/zipball/42302d779d1762c1ae7f872c92c16623a641c398",
-            "reference": "42302d779d1762c1ae7f872c92c16623a641c398",
+            "url": "https://api.github.com/repos/illuminate/mail/zipball/91ac88078b481f4b8bde7403f8bcb406be70769e",
+            "reference": "91ac88078b481f4b8bde7403f8bcb406be70769e",
             "shasum": ""
         },
         "require": {
-            "erusev/parsedown": "~1.7",
-            "illuminate/container": "5.5.*",
-            "illuminate/contracts": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0",
-            "psr/log": "~1.0",
-            "swiftmailer/swiftmailer": "~6.0",
-            "tijsverkoyen/css-to-inline-styles": "~2.2"
+            "erusev/parsedown": "^1.7",
+            "illuminate/container": "5.7.*",
+            "illuminate/contracts": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3",
+            "psr/log": "^1.0",
+            "swiftmailer/swiftmailer": "^6.0",
+            "tijsverkoyen/css-to-inline-styles": "^2.2.1"
         },
         "suggest": {
-            "aws/aws-sdk-php": "Required to use the SES mail driver (~3.0).",
-            "guzzlehttp/guzzle": "Required to use the Mailgun and Mandrill mail drivers (~6.0)."
+            "aws/aws-sdk-php": "Required to use the SES mail driver (^3.0).",
+            "guzzlehttp/guzzle": "Required to use the Mailgun and Mandrill mail drivers (^6.0)."
         },
-        "time": "2018-03-04T22:34:32+00:00",
+        "time": "2019-02-22T15:28:19+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -3201,29 +3393,29 @@
     },
     {
         "name": "illuminate/pipeline",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/pipeline.git",
-            "reference": "40b611615de9acac288d08bef1370cbda5f86d7d"
+            "reference": "63a6e66bfab88c9a7dd4bbb077634fac3df4aa2a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/pipeline/zipball/40b611615de9acac288d08bef1370cbda5f86d7d",
-            "reference": "40b611615de9acac288d08bef1370cbda5f86d7d",
+            "url": "https://api.github.com/repos/illuminate/pipeline/zipball/63a6e66bfab88c9a7dd4bbb077634fac3df4aa2a",
+            "reference": "63a6e66bfab88c9a7dd4bbb077634fac3df4aa2a",
             "shasum": ""
         },
         "require": {
-            "illuminate/contracts": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0"
+            "illuminate/contracts": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3"
         },
-        "time": "2017-03-09T15:44:54+00:00",
+        "time": "2019-02-24T18:58:51+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -3247,35 +3439,35 @@
     },
     {
         "name": "illuminate/session",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/session.git",
-            "reference": "248422140e7898ae0d5a4ed42e6e314c52677814"
+            "reference": "0d1233ea455b9ad50112212022ca3bcff874fa86"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/session/zipball/248422140e7898ae0d5a4ed42e6e314c52677814",
-            "reference": "248422140e7898ae0d5a4ed42e6e314c52677814",
+            "url": "https://api.github.com/repos/illuminate/session/zipball/0d1233ea455b9ad50112212022ca3bcff874fa86",
+            "reference": "0d1233ea455b9ad50112212022ca3bcff874fa86",
             "shasum": ""
         },
         "require": {
-            "illuminate/contracts": "5.5.*",
-            "illuminate/filesystem": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0",
-            "symfony/finder": "~3.3",
-            "symfony/http-foundation": "~3.3"
+            "illuminate/contracts": "5.7.*",
+            "illuminate/filesystem": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3",
+            "symfony/finder": "^4.1",
+            "symfony/http-foundation": "^4.1"
         },
         "suggest": {
-            "illuminate/console": "Required to use the session:table command (5.5.*)."
+            "illuminate/console": "Required to use the session:table command (5.7.*)."
         },
-        "time": "2017-12-14T13:29:55+00:00",
+        "time": "2019-02-11T13:48:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -3299,39 +3491,41 @@
     },
     {
         "name": "illuminate/support",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/support.git",
-            "reference": "5c405512d75dcaf5d37791badce02d86ed8e4bc4"
+            "reference": "3e2810145f37eb89fa11759781ee88ee1c1a5262"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/support/zipball/5c405512d75dcaf5d37791badce02d86ed8e4bc4",
-            "reference": "5c405512d75dcaf5d37791badce02d86ed8e4bc4",
+            "url": "https://api.github.com/repos/illuminate/support/zipball/3e2810145f37eb89fa11759781ee88ee1c1a5262",
+            "reference": "3e2810145f37eb89fa11759781ee88ee1c1a5262",
             "shasum": ""
         },
         "require": {
-            "doctrine/inflector": "~1.1",
+            "doctrine/inflector": "^1.1",
             "ext-mbstring": "*",
-            "illuminate/contracts": "5.5.*",
-            "nesbot/carbon": "^1.24.1",
-            "php": ">=7.0"
+            "illuminate/contracts": "5.7.*",
+            "nesbot/carbon": "^1.26.3",
+            "php": "^7.1.3"
         },
-        "replace": {
+        "conflict": {
             "tightenco/collect": "<5.5.33"
         },
         "suggest": {
-            "illuminate/filesystem": "Required to use the composer class (5.5.*).",
-            "symfony/process": "Required to use the composer class (~3.3).",
-            "symfony/var-dumper": "Required to use the dd function (~3.3)."
+            "illuminate/filesystem": "Required to use the composer class (5.7.*).",
+            "moontoast/math": "Required to use ordered UUIDs (^1.1).",
+            "ramsey/uuid": "Required to use Str::uuid() (^3.7).",
+            "symfony/process": "Required to use the composer class (^4.1).",
+            "symfony/var-dumper": "Required to use the dd function (^4.1)."
         },
-        "time": "2018-08-10T19:40:01+00:00",
+        "time": "2019-02-12T07:57:07+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -3358,30 +3552,30 @@
     },
     {
         "name": "illuminate/translation",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/translation.git",
-            "reference": "587734f44981cae0a7d98c89bfead040059b1636"
+            "reference": "4875559c0f32892c4070ca1185127c71fe18b8cb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/translation/zipball/587734f44981cae0a7d98c89bfead040059b1636",
-            "reference": "587734f44981cae0a7d98c89bfead040059b1636",
+            "url": "https://api.github.com/repos/illuminate/translation/zipball/4875559c0f32892c4070ca1185127c71fe18b8cb",
+            "reference": "4875559c0f32892c4070ca1185127c71fe18b8cb",
             "shasum": ""
         },
         "require": {
-            "illuminate/contracts": "5.5.*",
-            "illuminate/filesystem": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0"
+            "illuminate/contracts": "5.7.*",
+            "illuminate/filesystem": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3"
         },
-        "time": "2017-11-22T19:01:14+00:00",
+        "time": "2019-02-11T13:48:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -3405,35 +3599,35 @@
     },
     {
         "name": "illuminate/validation",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/validation.git",
-            "reference": "6590d61858f78c301bced7308593abfcd1c7e527"
+            "reference": "ee897c6708685294ebaa1db8407f30a1fe62f7f3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/validation/zipball/6590d61858f78c301bced7308593abfcd1c7e527",
-            "reference": "6590d61858f78c301bced7308593abfcd1c7e527",
+            "url": "https://api.github.com/repos/illuminate/validation/zipball/ee897c6708685294ebaa1db8407f30a1fe62f7f3",
+            "reference": "ee897c6708685294ebaa1db8407f30a1fe62f7f3",
             "shasum": ""
         },
         "require": {
-            "illuminate/container": "5.5.*",
-            "illuminate/contracts": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "illuminate/translation": "5.5.*",
-            "php": ">=7.0",
-            "symfony/http-foundation": "~3.3"
+            "illuminate/container": "5.7.*",
+            "illuminate/contracts": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "illuminate/translation": "5.7.*",
+            "php": "^7.1.3",
+            "symfony/http-foundation": "^4.1"
         },
         "suggest": {
-            "illuminate/database": "Required to use the database presence verifier (5.5.*)."
+            "illuminate/database": "Required to use the database presence verifier (5.7.*)."
         },
-        "time": "2018-10-01T13:28:19+00:00",
+        "time": "2019-02-11T13:48:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -3457,33 +3651,33 @@
     },
     {
         "name": "illuminate/view",
-        "version": "v5.5.44",
-        "version_normalized": "5.5.44.0",
+        "version": "v5.7.28",
+        "version_normalized": "5.7.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/view.git",
-            "reference": "892aa32a1b496cbafa5125bcc3f97ff795265f95"
+            "reference": "e19e4e16ad309503d27845383fc533a889581739"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/view/zipball/892aa32a1b496cbafa5125bcc3f97ff795265f95",
-            "reference": "892aa32a1b496cbafa5125bcc3f97ff795265f95",
+            "url": "https://api.github.com/repos/illuminate/view/zipball/e19e4e16ad309503d27845383fc533a889581739",
+            "reference": "e19e4e16ad309503d27845383fc533a889581739",
             "shasum": ""
         },
         "require": {
-            "illuminate/container": "5.5.*",
-            "illuminate/contracts": "5.5.*",
-            "illuminate/events": "5.5.*",
-            "illuminate/filesystem": "5.5.*",
-            "illuminate/support": "5.5.*",
-            "php": ">=7.0",
-            "symfony/debug": "~3.3"
+            "illuminate/container": "5.7.*",
+            "illuminate/contracts": "5.7.*",
+            "illuminate/events": "5.7.*",
+            "illuminate/filesystem": "5.7.*",
+            "illuminate/support": "5.7.*",
+            "php": "^7.1.3",
+            "symfony/debug": "^4.1"
         },
-        "time": "2018-10-04T14:46:49+00:00",
+        "time": "2019-02-11T13:48:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.5-dev"
+                "dev-master": "5.7-dev"
             }
         },
         "installation-source": "dist",
@@ -3507,17 +3701,17 @@
     },
     {
         "name": "intervention/image",
-        "version": "2.4.2",
-        "version_normalized": "2.4.2.0",
+        "version": "2.5.0",
+        "version_normalized": "2.5.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Intervention/image.git",
-            "reference": "e82d274f786e3d4b866a59b173f42e716f0783eb"
+            "reference": "39eaef720d082ecc54c64bf54541c55f10db546d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Intervention/image/zipball/e82d274f786e3d4b866a59b173f42e716f0783eb",
-            "reference": "e82d274f786e3d4b866a59b173f42e716f0783eb",
+            "url": "https://api.github.com/repos/Intervention/image/zipball/39eaef720d082ecc54c64bf54541c55f10db546d",
+            "reference": "39eaef720d082ecc54c64bf54541c55f10db546d",
             "shasum": ""
         },
         "require": {
@@ -3534,7 +3728,7 @@
             "ext-imagick": "to use Imagick based image processing.",
             "intervention/imagecache": "Caching extension for the Intervention Image library"
         },
-        "time": "2018-05-29T14:19:03+00:00",
+        "time": "2019-06-24T14:06:31+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -3748,18 +3942,65 @@
         ]
     },
     {
-        "name": "league/flysystem",
-        "version": "1.0.52",
-        "version_normalized": "1.0.52.0",
+        "name": "kylekatarnls/update-helper",
+        "version": "1.1.1",
+        "version_normalized": "1.1.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/thephpleague/flysystem.git",
-            "reference": "c5a5097156387970e6f0ccfcdf03f752856f3391"
+            "url": "https://github.com/kylekatarnls/update-helper.git",
+            "reference": "b34a46d7f5ec1795b4a15ac9d46b884377262df9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/c5a5097156387970e6f0ccfcdf03f752856f3391",
-            "reference": "c5a5097156387970e6f0ccfcdf03f752856f3391",
+            "url": "https://api.github.com/repos/kylekatarnls/update-helper/zipball/b34a46d7f5ec1795b4a15ac9d46b884377262df9",
+            "reference": "b34a46d7f5ec1795b4a15ac9d46b884377262df9",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.1.0",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "codeclimate/php-test-reporter": "dev-master",
+            "composer/composer": "^2.0.x-dev",
+            "phpunit/phpunit": ">=4.8.35 <6.0"
+        },
+        "time": "2019-06-05T08:34:23+00:00",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "UpdateHelper\\ComposerPlugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "UpdateHelper\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Kyle",
+                "email": "kylekatarnls@gmail.com"
+            }
+        ],
+        "description": "Update helper"
+    },
+    {
+        "name": "league/flysystem",
+        "version": "1.0.53",
+        "version_normalized": "1.0.53.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/thephpleague/flysystem.git",
+            "reference": "08e12b7628f035600634a5e76d95b5eb66cea674"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/08e12b7628f035600634a5e76d95b5eb66cea674",
+            "reference": "08e12b7628f035600634a5e76d95b5eb66cea674",
             "shasum": ""
         },
         "require": {
@@ -3789,7 +4030,7 @@
             "spatie/flysystem-dropbox": "Allows you to use Dropbox storage",
             "srmklive/flysystem-dropbox-v2": "Allows you to use Dropbox storage for PHP 5 applications"
         },
-        "time": "2019-05-20T20:21:14+00:00",
+        "time": "2019-06-18T20:09:29+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -4535,34 +4776,83 @@
         ]
     },
     {
-        "name": "nesbot/carbon",
-        "version": "1.37.1",
-        "version_normalized": "1.37.1.0",
+        "name": "mtdowling/cron-expression",
+        "version": "v1.2.1",
+        "version_normalized": "1.2.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/briannesbitt/Carbon.git",
-            "reference": "5be4fdf97076a685b23efdedfc2b73ad0c5eab70"
+            "url": "https://github.com/mtdowling/cron-expression.git",
+            "reference": "9504fa9ea681b586028adaaa0877db4aecf32bad"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/5be4fdf97076a685b23efdedfc2b73ad0c5eab70",
-            "reference": "5be4fdf97076a685b23efdedfc2b73ad0c5eab70",
+            "url": "https://api.github.com/repos/mtdowling/cron-expression/zipball/9504fa9ea681b586028adaaa0877db4aecf32bad",
+            "reference": "9504fa9ea681b586028adaaa0877db4aecf32bad",
             "shasum": ""
         },
         "require": {
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0|~5.0"
+        },
+        "time": "2017-01-23T04:29:33+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Cron\\": "src/Cron/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due",
+        "keywords": [
+            "cron",
+            "schedule"
+        ]
+    },
+    {
+        "name": "nesbot/carbon",
+        "version": "1.39.0",
+        "version_normalized": "1.39.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/briannesbitt/Carbon.git",
+            "reference": "dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0",
+            "reference": "dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0",
+            "shasum": ""
+        },
+        "require": {
+            "kylekatarnls/update-helper": "^1.1",
             "php": ">=5.3.9",
             "symfony/translation": "~2.6 || ~3.0 || ~4.0"
         },
         "require-dev": {
+            "composer/composer": "^1.2",
+            "friendsofphp/php-cs-fixer": "~2",
             "phpunit/phpunit": "^4.8.35 || ^5.7"
         },
-        "suggest": {
-            "friendsofphp/php-cs-fixer": "Needed for the `composer phpcs` command. Allow to automatically fix code style.",
-            "phpstan/phpstan": "Needed for the `composer phpstan` command. Allow to detect potential errors."
-        },
-        "time": "2019-04-19T10:27:42+00:00",
+        "time": "2019-06-11T09:07:59+00:00",
+        "bin": [
+            "bin/upgrade-carbon"
+        ],
         "type": "library",
         "extra": {
+            "update-helper": "Carbon\\Upgrade",
             "laravel": {
                 "providers": [
                     "Carbon\\Laravel\\ServiceProvider"
@@ -5217,27 +5507,27 @@
     },
     {
         "name": "ralouphie/getallheaders",
-        "version": "2.0.5",
-        "version_normalized": "2.0.5.0",
+        "version": "3.0.3",
+        "version_normalized": "3.0.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ralouphie/getallheaders.git",
-            "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
+            "reference": "120b605dfeb996808c31b6477290a714d356e822"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-            "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+            "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+            "reference": "120b605dfeb996808c31b6477290a714d356e822",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3"
+            "php": ">=5.6"
         },
         "require-dev": {
-            "phpunit/phpunit": "~3.7.0",
-            "satooshi/php-coveralls": ">=1.0"
+            "php-coveralls/php-coveralls": "^2.1",
+            "phpunit/phpunit": "^5 || ^6.5"
         },
-        "time": "2016-02-11T07:05:27+00:00",
+        "time": "2019-03-08T08:55:37+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -5256,6 +5546,90 @@
             }
         ],
         "description": "A polyfill for getallheaders."
+    },
+    {
+        "name": "ramsey/uuid",
+        "version": "3.8.0",
+        "version_normalized": "3.8.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ramsey/uuid.git",
+            "reference": "d09ea80159c1929d75b3f9c60504d613aeb4a1e3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ramsey/uuid/zipball/d09ea80159c1929d75b3f9c60504d613aeb4a1e3",
+            "reference": "d09ea80159c1929d75b3f9c60504d613aeb4a1e3",
+            "shasum": ""
+        },
+        "require": {
+            "paragonie/random_compat": "^1.0|^2.0|9.99.99",
+            "php": "^5.4 || ^7.0",
+            "symfony/polyfill-ctype": "^1.8"
+        },
+        "replace": {
+            "rhumsaa/uuid": "self.version"
+        },
+        "require-dev": {
+            "codeception/aspect-mock": "^1.0 | ~2.0.0",
+            "doctrine/annotations": "~1.2.0",
+            "goaop/framework": "1.0.0-alpha.2 | ^1.0 | ~2.1.0",
+            "ircmaxell/random-lib": "^1.1",
+            "jakub-onderka/php-parallel-lint": "^0.9.0",
+            "mockery/mockery": "^0.9.9",
+            "moontoast/math": "^1.1",
+            "php-mock/php-mock-phpunit": "^0.3|^1.1",
+            "phpunit/phpunit": "^4.7|^5.0|^6.5",
+            "squizlabs/php_codesniffer": "^2.3"
+        },
+        "suggest": {
+            "ext-ctype": "Provides support for PHP Ctype functions",
+            "ext-libsodium": "Provides the PECL libsodium extension for use with the SodiumRandomGenerator",
+            "ext-uuid": "Provides the PECL UUID extension for use with the PeclUuidTimeGenerator and PeclUuidRandomGenerator",
+            "ircmaxell/random-lib": "Provides RandomLib for use with the RandomLibAdapter",
+            "moontoast/math": "Provides support for converting UUID to 128-bit integer (in string form).",
+            "ramsey/uuid-console": "A console application for generating UUIDs with ramsey/uuid",
+            "ramsey/uuid-doctrine": "Allows the use of Ramsey\\Uuid\\Uuid as Doctrine field type."
+        },
+        "time": "2018-07-19T23:38:55+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Ramsey\\Uuid\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Marijn Huizendveld",
+                "email": "marijn.huizendveld@gmail.com"
+            },
+            {
+                "name": "Thibaud Fabre",
+                "email": "thibaud@aztech.io"
+            },
+            {
+                "name": "Ben Ramsey",
+                "email": "ben@benramsey.com",
+                "homepage": "https://benramsey.com"
+            }
+        ],
+        "description": "Formerly rhumsaa/uuid. A PHP 5.4+ library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID).",
+        "homepage": "https://github.com/ramsey/uuid",
+        "keywords": [
+            "guid",
+            "identifier",
+            "uuid"
+        ]
     },
     {
         "name": "reflar/latex",
@@ -5331,23 +5705,23 @@
     },
     {
         "name": "reflar/polls",
-        "version": "1.3.2",
-        "version_normalized": "1.3.2.0",
+        "version": "1.3.4",
+        "version_normalized": "1.3.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ReFlar/polls.git",
-            "reference": "21b546330b5ac9578b17ba15174503063fbb1a74"
+            "reference": "e87fd7a89b1c40331ffcad20a85eab83ded83361"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ReFlar/polls/zipball/21b546330b5ac9578b17ba15174503063fbb1a74",
-            "reference": "21b546330b5ac9578b17ba15174503063fbb1a74",
+            "url": "https://api.github.com/repos/ReFlar/polls/zipball/e87fd7a89b1c40331ffcad20a85eab83ded83361",
+            "reference": "e87fd7a89b1c40331ffcad20a85eab83ded83361",
             "shasum": ""
         },
         "require": {
             "flarum/core": "^0.1.0-beta.8"
         },
-        "time": "2018-12-21T23:52:39+00:00",
+        "time": "2019-06-29T20:03:01+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
@@ -5387,21 +5761,22 @@
             "poll",
             "polls",
             "reflar"
-        ]
+        ],
+        "abandoned": "fof/polls"
     },
     {
         "name": "s9e/text-formatter",
-        "version": "1.4.4",
-        "version_normalized": "1.4.4.0",
+        "version": "1.4.5",
+        "version_normalized": "1.4.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/s9e/TextFormatter.git",
-            "reference": "504d538593350150e50c9de0a48418bb0a48e540"
+            "reference": "6857c53658929b66dc0d92daece17f211c64ea61"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/504d538593350150e50c9de0a48418bb0a48e540",
-            "reference": "504d538593350150e50c9de0a48418bb0a48e540",
+            "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/6857c53658929b66dc0d92daece17f211c64ea61",
+            "reference": "6857c53658929b66dc0d92daece17f211c64ea61",
             "shasum": ""
         },
         "require": {
@@ -5425,7 +5800,7 @@
             "ext-xsl": "Enables the XSLT renderer",
             "ext-zlib": "Enables gzip compression when scraping content via the MediaEmbed plugin"
         },
-        "time": "2019-05-15T00:08:12+00:00",
+        "time": "2019-06-04T15:47:55+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -5523,17 +5898,17 @@
     },
     {
         "name": "symfony/config",
-        "version": "v3.4.27",
-        "version_normalized": "3.4.27.0",
+        "version": "v3.4.29",
+        "version_normalized": "3.4.29.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/config.git",
-            "reference": "177a276c01575253c95cefe0866e3d1b57637fe0"
+            "reference": "29a33f66194fbe2ed4555981810f15fd8440e4a8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/config/zipball/177a276c01575253c95cefe0866e3d1b57637fe0",
-            "reference": "177a276c01575253c95cefe0866e3d1b57637fe0",
+            "url": "https://api.github.com/repos/symfony/config/zipball/29a33f66194fbe2ed4555981810f15fd8440e4a8",
+            "reference": "29a33f66194fbe2ed4555981810f15fd8440e4a8",
             "shasum": ""
         },
         "require": {
@@ -5554,7 +5929,7 @@
         "suggest": {
             "symfony/yaml": "To use the yaml reference dumper"
         },
-        "time": "2019-02-23T15:06:07+00:00",
+        "time": "2019-05-30T15:47:52+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -5589,26 +5964,28 @@
     },
     {
         "name": "symfony/console",
-        "version": "v3.4.27",
-        "version_normalized": "3.4.27.0",
+        "version": "v4.3.2",
+        "version_normalized": "4.3.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/console.git",
-            "reference": "15a9104356436cb26e08adab97706654799d31d8"
+            "reference": "b592b26a24265a35172d8a2094d8b10f22b7cc39"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/console/zipball/15a9104356436cb26e08adab97706654799d31d8",
-            "reference": "15a9104356436cb26e08adab97706654799d31d8",
+            "url": "https://api.github.com/repos/symfony/console/zipball/b592b26a24265a35172d8a2094d8b10f22b7cc39",
+            "reference": "b592b26a24265a35172d8a2094d8b10f22b7cc39",
             "shasum": ""
         },
         "require": {
-            "php": "^5.5.9|>=7.0.8",
-            "symfony/debug": "~2.8|~3.0|~4.0",
-            "symfony/polyfill-mbstring": "~1.0"
+            "php": "^7.1.3",
+            "symfony/polyfill-mbstring": "~1.0",
+            "symfony/polyfill-php73": "^1.8",
+            "symfony/service-contracts": "^1.1"
         },
         "conflict": {
             "symfony/dependency-injection": "<3.4",
+            "symfony/event-dispatcher": "<4.3",
             "symfony/process": "<3.3"
         },
         "provide": {
@@ -5616,11 +5993,12 @@
         },
         "require-dev": {
             "psr/log": "~1.0",
-            "symfony/config": "~3.3|~4.0",
+            "symfony/config": "~3.4|~4.0",
             "symfony/dependency-injection": "~3.4|~4.0",
-            "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
+            "symfony/event-dispatcher": "^4.3",
             "symfony/lock": "~3.4|~4.0",
-            "symfony/process": "~3.3|~4.0"
+            "symfony/process": "~3.4|~4.0",
+            "symfony/var-dumper": "^4.3"
         },
         "suggest": {
             "psr/log": "For using the console logger",
@@ -5628,11 +6006,11 @@
             "symfony/lock": "",
             "symfony/process": ""
         },
-        "time": "2019-04-08T09:29:13+00:00",
+        "time": "2019-06-13T11:03:18+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.4-dev"
+                "dev-master": "4.3-dev"
             }
         },
         "installation-source": "dist",
@@ -5663,27 +6041,27 @@
     },
     {
         "name": "symfony/css-selector",
-        "version": "v4.2.8",
-        "version_normalized": "4.2.8.0",
+        "version": "v4.3.2",
+        "version_normalized": "4.3.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/css-selector.git",
-            "reference": "48eddf66950fa57996e1be4a55916d65c10c604a"
+            "reference": "105c98bb0c5d8635bea056135304bd8edcc42b4d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/css-selector/zipball/48eddf66950fa57996e1be4a55916d65c10c604a",
-            "reference": "48eddf66950fa57996e1be4a55916d65c10c604a",
+            "url": "https://api.github.com/repos/symfony/css-selector/zipball/105c98bb0c5d8635bea056135304bd8edcc42b4d",
+            "reference": "105c98bb0c5d8635bea056135304bd8edcc42b4d",
             "shasum": ""
         },
         "require": {
             "php": "^7.1.3"
         },
-        "time": "2019-01-16T20:31:39+00:00",
+        "time": "2019-01-16T21:53:39+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.2-dev"
+                "dev-master": "4.3-dev"
             }
         },
         "installation-source": "dist",
@@ -5718,34 +6096,34 @@
     },
     {
         "name": "symfony/debug",
-        "version": "v3.4.27",
-        "version_normalized": "3.4.27.0",
+        "version": "v4.3.2",
+        "version_normalized": "4.3.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/debug.git",
-            "reference": "681afbb26488903c5ac15e63734f1d8ac430c9b9"
+            "reference": "d8f4fb38152e0eb6a433705e5f661d25b32c5fcd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/debug/zipball/681afbb26488903c5ac15e63734f1d8ac430c9b9",
-            "reference": "681afbb26488903c5ac15e63734f1d8ac430c9b9",
+            "url": "https://api.github.com/repos/symfony/debug/zipball/d8f4fb38152e0eb6a433705e5f661d25b32c5fcd",
+            "reference": "d8f4fb38152e0eb6a433705e5f661d25b32c5fcd",
             "shasum": ""
         },
         "require": {
-            "php": "^5.5.9|>=7.0.8",
+            "php": "^7.1.3",
             "psr/log": "~1.0"
         },
         "conflict": {
-            "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+            "symfony/http-kernel": "<3.4"
         },
         "require-dev": {
-            "symfony/http-kernel": "~2.8|~3.0|~4.0"
+            "symfony/http-kernel": "~3.4|~4.0"
         },
-        "time": "2019-04-11T09:48:14+00:00",
+        "time": "2019-06-19T15:27:09+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.4-dev"
+                "dev-master": "4.3-dev"
             }
         },
         "installation-source": "dist",
@@ -5776,28 +6154,28 @@
     },
     {
         "name": "symfony/filesystem",
-        "version": "v4.2.8",
-        "version_normalized": "4.2.8.0",
+        "version": "v4.3.2",
+        "version_normalized": "4.3.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/filesystem.git",
-            "reference": "e16b9e471703b2c60b95f14d31c1239f68f11601"
+            "reference": "b9896d034463ad6fd2bf17e2bf9418caecd6313d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/filesystem/zipball/e16b9e471703b2c60b95f14d31c1239f68f11601",
-            "reference": "e16b9e471703b2c60b95f14d31c1239f68f11601",
+            "url": "https://api.github.com/repos/symfony/filesystem/zipball/b9896d034463ad6fd2bf17e2bf9418caecd6313d",
+            "reference": "b9896d034463ad6fd2bf17e2bf9418caecd6313d",
             "shasum": ""
         },
         "require": {
             "php": "^7.1.3",
             "symfony/polyfill-ctype": "~1.8"
         },
-        "time": "2019-02-07T11:40:08+00:00",
+        "time": "2019-06-23T08:51:25+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.2-dev"
+                "dev-master": "4.3-dev"
             }
         },
         "installation-source": "dist",
@@ -5828,27 +6206,27 @@
     },
     {
         "name": "symfony/finder",
-        "version": "v3.4.27",
-        "version_normalized": "3.4.27.0",
+        "version": "v4.3.2",
+        "version_normalized": "4.3.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/finder.git",
-            "reference": "61af5ce0b34b942d414fe8f1b11950d0e9a90e98"
+            "reference": "33c21f7d5d3dc8a140c282854a7e13aeb5d0f91a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/finder/zipball/61af5ce0b34b942d414fe8f1b11950d0e9a90e98",
-            "reference": "61af5ce0b34b942d414fe8f1b11950d0e9a90e98",
+            "url": "https://api.github.com/repos/symfony/finder/zipball/33c21f7d5d3dc8a140c282854a7e13aeb5d0f91a",
+            "reference": "33c21f7d5d3dc8a140c282854a7e13aeb5d0f91a",
             "shasum": ""
         },
         "require": {
-            "php": "^5.5.9|>=7.0.8"
+            "php": "^7.1.3"
         },
-        "time": "2019-04-02T19:54:57+00:00",
+        "time": "2019-06-13T11:03:18+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.4-dev"
+                "dev-master": "4.3-dev"
             }
         },
         "installation-source": "dist",
@@ -5879,32 +6257,33 @@
     },
     {
         "name": "symfony/http-foundation",
-        "version": "v3.4.27",
-        "version_normalized": "3.4.27.0",
+        "version": "v4.3.2",
+        "version_normalized": "4.3.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/http-foundation.git",
-            "reference": "fa02215233be8de1c2b44617088192f9e8db3512"
+            "reference": "e1b507fcfa4e87d192281774b5ecd4265370180d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/fa02215233be8de1c2b44617088192f9e8db3512",
-            "reference": "fa02215233be8de1c2b44617088192f9e8db3512",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/e1b507fcfa4e87d192281774b5ecd4265370180d",
+            "reference": "e1b507fcfa4e87d192281774b5ecd4265370180d",
             "shasum": ""
         },
         "require": {
-            "php": "^5.5.9|>=7.0.8",
-            "symfony/polyfill-mbstring": "~1.1",
-            "symfony/polyfill-php70": "~1.6"
+            "php": "^7.1.3",
+            "symfony/mime": "^4.3",
+            "symfony/polyfill-mbstring": "~1.1"
         },
         "require-dev": {
-            "symfony/expression-language": "~2.8|~3.0|~4.0"
+            "predis/predis": "~1.0",
+            "symfony/expression-language": "~3.4|~4.0"
         },
-        "time": "2019-05-01T08:04:33+00:00",
+        "time": "2019-06-26T09:25:00+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.4-dev"
+                "dev-master": "4.3-dev"
             }
         },
         "installation-source": "dist",
@@ -5932,6 +6311,67 @@
         ],
         "description": "Symfony HttpFoundation Component",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "symfony/mime",
+        "version": "v4.3.2",
+        "version_normalized": "4.3.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/mime.git",
+            "reference": "ec2c5565de60e03f33d4296a655e3273f0ad1f8b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/mime/zipball/ec2c5565de60e03f33d4296a655e3273f0ad1f8b",
+            "reference": "ec2c5565de60e03f33d4296a655e3273f0ad1f8b",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3",
+            "symfony/polyfill-intl-idn": "^1.10",
+            "symfony/polyfill-mbstring": "^1.0"
+        },
+        "require-dev": {
+            "egulias/email-validator": "^2.0",
+            "symfony/dependency-injection": "~3.4|^4.1"
+        },
+        "time": "2019-06-04T09:22:54+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Mime\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "A library to manipulate MIME messages",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "mime",
+            "mime-type"
+        ]
     },
     {
         "name": "symfony/polyfill-ctype",
@@ -6180,67 +6620,6 @@
         ]
     },
     {
-        "name": "symfony/polyfill-php70",
-        "version": "v1.11.0",
-        "version_normalized": "1.11.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/polyfill-php70.git",
-            "reference": "bc4858fb611bda58719124ca079baff854149c89"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/bc4858fb611bda58719124ca079baff854149c89",
-            "reference": "bc4858fb611bda58719124ca079baff854149c89",
-            "shasum": ""
-        },
-        "require": {
-            "paragonie/random_compat": "~1.0|~2.0|~9.99",
-            "php": ">=5.3.3"
-        },
-        "time": "2019-02-06T07:57:58+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.11-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Polyfill\\Php70\\": ""
-            },
-            "files": [
-                "bootstrap.php"
-            ],
-            "classmap": [
-                "Resources/stubs"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Nicolas Grekas",
-                "email": "p@tchwork.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
-        "homepage": "https://symfony.com",
-        "keywords": [
-            "compatibility",
-            "polyfill",
-            "portable",
-            "shim"
-        ]
-    },
-    {
         "name": "symfony/polyfill-php72",
         "version": "v1.11.0",
         "version_normalized": "1.11.0.0",
@@ -6298,18 +6677,189 @@
         ]
     },
     {
-        "name": "symfony/translation",
-        "version": "v3.4.27",
-        "version_normalized": "3.4.27.0",
+        "name": "symfony/polyfill-php73",
+        "version": "v1.11.0",
+        "version_normalized": "1.11.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/symfony/translation.git",
-            "reference": "301a5d627220a1c4ee522813b0028653af6c4f54"
+            "url": "https://github.com/symfony/polyfill-php73.git",
+            "reference": "d1fb4abcc0c47be136208ad9d68bf59f1ee17abd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/translation/zipball/301a5d627220a1c4ee522813b0028653af6c4f54",
-            "reference": "301a5d627220a1c4ee522813b0028653af6c4f54",
+            "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/d1fb4abcc0c47be136208ad9d68bf59f1ee17abd",
+            "reference": "d1fb4abcc0c47be136208ad9d68bf59f1ee17abd",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2019-02-06T07:57:58+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.11-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Php73\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ],
+            "classmap": [
+                "Resources/stubs"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "symfony/process",
+        "version": "v4.3.2",
+        "version_normalized": "4.3.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/process.git",
+            "reference": "856d35814cf287480465bb7a6c413bb7f5f5e69c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/process/zipball/856d35814cf287480465bb7a6c413bb7f5f5e69c",
+            "reference": "856d35814cf287480465bb7a6c413bb7f5f5e69c",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3"
+        },
+        "time": "2019-05-30T16:10:05+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Process\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Process Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "symfony/service-contracts",
+        "version": "v1.1.5",
+        "version_normalized": "1.1.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/service-contracts.git",
+            "reference": "f391a00de78ec7ec8cf5cdcdae59ec7b883edb8d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/service-contracts/zipball/f391a00de78ec7ec8cf5cdcdae59ec7b883edb8d",
+            "reference": "f391a00de78ec7ec8cf5cdcdae59ec7b883edb8d",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3",
+            "psr/container": "^1.0"
+        },
+        "suggest": {
+            "symfony/service-implementation": ""
+        },
+        "time": "2019-06-13T11:15:36+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Contracts\\Service\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Generic abstractions related to writing services",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "abstractions",
+            "contracts",
+            "decoupling",
+            "interfaces",
+            "interoperability",
+            "standards"
+        ]
+    },
+    {
+        "name": "symfony/translation",
+        "version": "v3.4.29",
+        "version_normalized": "3.4.29.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/translation.git",
+            "reference": "5c07632afb8cb14b422051b651213ed17bf7c249"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/translation/zipball/5c07632afb8cb14b422051b651213ed17bf7c249",
+            "reference": "5c07632afb8cb14b422051b651213ed17bf7c249",
             "shasum": ""
         },
         "require": {
@@ -6336,7 +6886,7 @@
             "symfony/config": "",
             "symfony/yaml": ""
         },
-        "time": "2019-05-01T11:10:09+00:00",
+        "time": "2019-06-13T10:34:15+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -6371,8 +6921,8 @@
     },
     {
         "name": "symfony/yaml",
-        "version": "v3.4.27",
-        "version_normalized": "3.4.27.0",
+        "version": "v3.4.29",
+        "version_normalized": "3.4.29.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/yaml.git",
@@ -6533,24 +7083,24 @@
     },
     {
         "name": "v17development/flarum-seo",
-        "version": "1.0",
-        "version_normalized": "1.0.0.0",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/v17development/flarum-seo.git",
-            "reference": "54dd8220337d80971adc31af22f9634a804c4b99"
+            "reference": "024897775e59288e80a8a04dd24bd6a0fe6e226a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/v17development/flarum-seo/zipball/54dd8220337d80971adc31af22f9634a804c4b99",
-            "reference": "54dd8220337d80971adc31af22f9634a804c4b99",
+            "url": "https://api.github.com/repos/v17development/flarum-seo/zipball/024897775e59288e80a8a04dd24bd6a0fe6e226a",
+            "reference": "024897775e59288e80a8a04dd24bd6a0fe6e226a",
             "shasum": ""
         },
         "require": {
             "ext-json": "*",
             "flarum/core": "^0.1.0-beta.8"
         },
-        "time": "2019-05-18T18:50:06+00:00",
+        "time": "2019-05-24T23:05:47+00:00",
         "type": "flarum-extension",
         "extra": {
             "flarum-extension": {
@@ -6582,23 +7132,24 @@
     },
     {
         "name": "wiwatsrt/flarum-ext-best-answer",
-        "version": "v0.2.1",
-        "version_normalized": "0.2.1.0",
+        "version": "v0.2.4",
+        "version_normalized": "0.2.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/wiwatsrt/flarum-ext-best-answer.git",
-            "reference": "b8974d7daf1dad99bc84b0a9c843958071b183c7"
+            "reference": "f11c04929b54bc8be10b62648d210fb52e71aded"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/wiwatsrt/flarum-ext-best-answer/zipball/b8974d7daf1dad99bc84b0a9c843958071b183c7",
-            "reference": "b8974d7daf1dad99bc84b0a9c843958071b183c7",
+            "url": "https://api.github.com/repos/wiwatsrt/flarum-ext-best-answer/zipball/f11c04929b54bc8be10b62648d210fb52e71aded",
+            "reference": "f11c04929b54bc8be10b62648d210fb52e71aded",
             "shasum": ""
         },
         "require": {
-            "flarum/core": "^0.1.0-beta.8"
+            "flarum/core": "^0.1.0-beta.9",
+            "fof/console": "^0.5"
         },
-        "time": "2019-03-03T10:42:15+00:00",
+        "time": "2019-07-06T07:56:31+00:00",
         "type": "flarum-extension",
         "extra": {
             "branch-alias": {
@@ -6807,17 +7358,17 @@
     },
     {
         "name": "zendframework/zend-stratigility",
-        "version": "3.1.0",
-        "version_normalized": "3.1.0.0",
+        "version": "3.2.0",
+        "version_normalized": "3.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/zendframework/zend-stratigility.git",
-            "reference": "2ef1189a1c6d42647e9a018fcb4e35c5f8b9884f"
+            "reference": "880c4a72de84e07c406bccee6f5bf32fce950abf"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/zendframework/zend-stratigility/zipball/2ef1189a1c6d42647e9a018fcb4e35c5f8b9884f",
-            "reference": "2ef1189a1c6d42647e9a018fcb4e35c5f8b9884f",
+            "url": "https://api.github.com/repos/zendframework/zend-stratigility/zipball/880c4a72de84e07c406bccee6f5bf32fce950abf",
+            "reference": "880c4a72de84e07c406bccee6f5bf32fce950abf",
             "shasum": ""
         },
         "require": {
@@ -6839,12 +7390,12 @@
         "suggest": {
             "psr/http-message-implementation": "Please install a psr/http-message-implementation to consume Stratigility; e.g., zendframework/zend-diactoros"
         },
-        "time": "2019-02-06T18:17:09+00:00",
+        "time": "2019-06-12T15:22:39+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.1.x-dev",
-                "dev-develop": "3.2.x-dev"
+                "dev-master": "3.2.x-dev",
+                "dev-develop": "3.3.x-dev"
             }
         },
         "installation-source": "dist",

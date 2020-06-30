@@ -14,9 +14,9 @@
         <item>
             <title><![CDATA[<?php echo $entry['title']; ?>]]></title>
             <description><![CDATA[<?php echo $entry['description']; ?>]]></description>
-            <content:encoded><![CDATA[<?php echo isset($entry['content']) ? $entry['content'] : $entry['description']; ?>]]></content:encoded>
+            <content:encoded><![CDATA[<?php echo $entry['content'] or $entry['description']; ?>]]></content:encoded>
             <link><?php echo e($entry['permalink']); ?></link>
-            <guid isPermaLink="<?php echo e(!isset($entry['id'])); ?>"><?php echo e(isset($entry['id']) ? $entry['id'] : $entry['permalink']); ?></guid>
+            <guid isPermaLink="<?php echo e(!isset($entry['id'])); ?>"><?php echo e($entry['id'] or $entry['permalink']); ?></guid>
             <pubDate><?php echo e($entry['pubdate']->format(DateTime::RSS)); ?></pubDate>
         </item>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

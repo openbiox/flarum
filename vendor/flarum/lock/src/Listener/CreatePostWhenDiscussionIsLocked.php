@@ -11,17 +11,10 @@
 
 namespace Flarum\Lock\Listener;
 
-use Flarum\Api\Serializer\BasicDiscussionSerializer;
-use Flarum\Discussion\Discussion;
-use Flarum\Event\ConfigureNotificationTypes;
-use Flarum\Event\ConfigurePostTypes;
 use Flarum\Lock\Event\DiscussionWasLocked;
-use Flarum\Lock\Event\DiscussionWasUnlocked;
 use Flarum\Lock\Notification\DiscussionLockedBlueprint;
 use Flarum\Lock\Post\DiscussionLockedPost;
 use Flarum\Notification\NotificationSyncer;
-use Flarum\User\User;
-use Illuminate\Contracts\Events\Dispatcher;
 
 class CreatePostWhenDiscussionIsLocked
 {
@@ -30,76 +23,25 @@ class CreatePostWhenDiscussionIsLocked
      */
     protected $notifications;
 
-    /**
-     * @param NotificationSyncer $notifications
-     */
     public function __construct(NotificationSyncer $notifications)
     {
         $this->notifications = $notifications;
     }
 
-    /**
-     * @param Dispatcher $events
-     */
-    public function subscribe(Dispatcher $events)
-    {
-        $events->listen(ConfigurePostTypes::class, [$this, 'addPostType']);
-        $events->listen(ConfigureNotificationTypes::class, [$this, 'addNotificationType']);
-        $events->listen(DiscussionWasLocked::class, [$this, 'whenDiscussionWasLocked']);
-        $events->listen(DiscussionWasUnlocked::class, [$this, 'whenDiscussionWasUnlocked']);
-    }
-
-    /**
-     * @param ConfigurePostTypes $event
-     */
-    public function addPostType(ConfigurePostTypes $event)
-    {
-        $event->add(DiscussionLockedPost::class);
-    }
-
-    /**
-     * @param ConfigureNotificationTypes $event
-     */
-    public function addNotificationType(ConfigureNotificationTypes $event)
-    {
-        $event->add(DiscussionLockedBlueprint::class, BasicDiscussionSerializer::class, ['alert']);
-    }
-
-    /**
-     * @param DiscussionWasLocked $event
-     */
-    public function whenDiscussionWasLocked(DiscussionWasLocked $event)
-    {
-        $this->lockedChanged($event->discussion, $event->user, true);
-    }
-
-    /**
-     * @param DiscussionWasUnlocked $event
-     */
-    public function whenDiscussionWasUnlocked(DiscussionWasUnlocked $event)
-    {
-        $this->lockedChanged($event->discussion, $event->user, false);
-    }
-
-    /**
-     * @param Discussion $discussion
-     * @param User $user
-     * @param $isLocked
-     */
-    protected function lockedChanged(Discussion $discussion, User $user, $isLocked)
+    public function handle(DiscussionWasLocked $event)
     {
         $post = DiscussionLockedPost::reply(
-            $discussion->id,
-            $user->id,
-            $isLocked
+            $event->discussion->id,
+            $event->user->id,
+            true
         );
 
-        $post = $discussion->mergePost($post);
+        $post = $event->discussion->mergePost($post);
 
-        if ($discussion->user_id !== $user->id) {
+        if ($event->discussion->user_id !== $event->user->id) {
             $notification = new DiscussionLockedBlueprint($post);
 
-            $this->notifications->sync($notification, $post->exists ? [$discussion->user] : []);
+            $this->notifications->sync($notification, $post->exists ? [$event->discussion->user] : []);
         }
     }
 }

@@ -40,7 +40,10 @@ class ApiServiceProvider extends AbstractServiceProvider
         });
 
         $this->app->singleton('flarum.api.routes', function () {
-            return new RouteCollection;
+            $routes = new RouteCollection;
+            $this->populateRoutes($routes);
+
+            return $routes;
         });
 
         $this->app->singleton('flarum.api.middleware', function (Application $app) {
@@ -54,6 +57,7 @@ class ApiServiceProvider extends AbstractServiceProvider
             $pipe->pipe($app->make(HttpMiddleware\RememberFromCookie::class));
             $pipe->pipe($app->make(HttpMiddleware\AuthenticateWithSession::class));
             $pipe->pipe($app->make(HttpMiddleware\AuthenticateWithHeader::class));
+            $pipe->pipe($app->make(HttpMiddleware\CheckCsrfToken::class));
             $pipe->pipe($app->make(HttpMiddleware\SetLocale::class));
 
             event(new ConfigureMiddleware($pipe, 'api'));
@@ -90,8 +94,6 @@ class ApiServiceProvider extends AbstractServiceProvider
      */
     public function boot()
     {
-        $this->populateRoutes($this->app->make('flarum.api.routes'));
-
         $this->registerNotificationSerializers();
 
         AbstractSerializeController::setContainer($this->app);

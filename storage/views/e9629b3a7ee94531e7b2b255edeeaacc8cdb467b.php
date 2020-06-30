@@ -14,10 +14,10 @@
     <entry>
         <title><![CDATA[<?php echo $entry['title']; ?>]]></title>
         <link rel="alternate" type="text/html" href="<?php echo e($entry['permalink']); ?>"/>
-        <id><?php echo e(isset($entry['id']) ? $entry['id'] : $entry['permalink']); ?></id>
+        <id><?php echo e($entry['id'] or $entry['permalink']); ?></id>
         <updated><?php echo e($entry['pubdate']->format(DateTime::ATOM)); ?></updated>
         <summary><![CDATA[<?php echo $entry['description']; ?>]]></summary>
-        <content type="html"><![CDATA[<?php echo isset($entry['content']) ? $entry['content'] : $entry['description']; ?>]]></content>
+        <content type="html"><![CDATA[<?php echo $entry['content'] or $entry['description']; ?>]]></content>
         <author>
             <name><?php echo e($entry['author']); ?></name>
         </author>
